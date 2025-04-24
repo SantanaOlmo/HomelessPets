@@ -1,6 +1,10 @@
 *{
     margin: 0;
     font-family: sans-serif;
+    
+}
+body{
+    background-color: #FEF8F7;
 }
 
 header {
@@ -92,7 +96,6 @@ main {
     rotate: 180deg;
     
 }
-
 #cajaRecienLlegados{
     z-index: 0;
     width:95vw;
@@ -102,7 +105,6 @@ main {
     justify-content: space-evenly;
     align-items: center;
 }
-
 .tarjetas{
     position:relative;
     background-color: rgb(255, 255, 255);
@@ -160,9 +162,73 @@ main {
  
 }
 
+/* E S P E C I E S */
+#Especies{
+    
+    text-align: center;
+    margin:5vw 10vw 0 ;
+    border-radius: 25px;
+}
+.tarjetaEspecie{
+    
+    border: 5px solid rgb(255, 255, 255);
+    position: relative;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 25px;
+    display: inline-block;
+    margin:2vw;
+    background-color: rgb(124, 200, 101);
+    overflow: hidden;
+   
+    .flow{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:0;
+        width: 100%;
+        position: absolute;
+        bottom:0;
+        background-color: rgb(255, 255, 255);
+        z-index: 1;
+        transition: height .8s ease-in-out;
+
+        h2{
+            opacity: 0;
+            transition:opacity .5s ease-in-out;
+        }
+        .slogan{
+            opacity: 0;
+            transition:opacity .5s ease-in-out;
+        }
+    }
+}
+.tarjetaEspecie:hover{
+    cursor: pointer;
+    border: 5px solid rgb(255, 132, 56);
+
+   .flow{
+    transition: height .5s ease-in-out;
+    height: 100%;
+   }
+   h2{
+    opacity: 1;
+    transition:opacity 1s ease-in-out;
+}
+.slogan{
+    opacity: 1;
+    transition:opacity 1s ease-in-out;
+}
+}
+
+
 footer{
-    height: 60vh;
     background-color:rgb(40, 150, 58) ;
+
+}
+#elementosFooter{
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -179,8 +245,8 @@ footer{
         font-size: 22px;
         transition: all .2s ease-in-out;
     }
-
 }
+
 #map{
     border: 3px solid rgb(255, 255, 255);
     width: 20vw;
@@ -207,6 +273,7 @@ footer{
     display: flex;
     flex-direction: column;
     width: 15%;
+    gap: 1vw;
 
 }
   
