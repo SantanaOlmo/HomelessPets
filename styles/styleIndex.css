@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+    
+}
+body{
+    background-color: #FEF8F7;
+}
+
+header {
+    position: fixed;        /* fija en la parte superior del viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;           /* ajusta al alto que necesites */
+    background: linear-gradient(
+      to bottom,
+      rgba(78, 153, 53, 0.6),
+      rgba(255, 255, 255, 0)
+    );
+    z-index: 10;             
+    display: flex;           
+    align-items: center;
+    justify-content:space-evenly;
+    padding: 0 1rem;
+    
+    img{
+        width: 3%;
+    }
+    .links{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 1vw;
+        font-weight: 900;        
+        transition: all .2s ease-in-out;
+
+    }
+    .links:hover{
+        font-size: 1.1vw;
+        transition: all .2s ease-in-out;
+        color: rgb(23, 187, 228);
+    }
+
+  }
+  
+  /* Empuja el contenido del main hacia arriba para que asome por debajo del header */
+main {
+    
+    height: 500vh;
+  
+  }
+  
+#Inicio {
+    margin-top: 0;
+    height: 95vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url("/imgs/tortoiseFULL.png");
+    background-size:contain;
+    background-position:top;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    align-items: center;
+    color: rgb(40, 150, 58);
+    font-weight: 900;
+    #slogan{
+        margin-left: 8vw;
+        width: 30vw;
+        text-align: center;
+        font-size: 3vw;
+    }
+    
+  }
+
+#RecienLlegados{
+    background-color: rgb(255, 255, 255);
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(255, 132, 56);
+    
+}
+#tituloRecienLlegados{
+    width:2vw;
+    font-size: 1.81vw;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    text-align: left;
+    z-index: 10;
+    writing-mode: vertical-lr;
+    text-orientation:sideways-right;
+    rotate: 180deg;
+    
+}
+#cajaRecienLlegados{
+    z-index: 0;
+    width:95vw;
+    height: 40vh;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.tarjetas{
+    position:relative;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    border-radius: 20px;
+    width: 20%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    .panel{
+        font-weight: 900;
+        font-size: 2vw;
+        color: white;
+        opacity: 0;
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0px;
+        z-index: 2;
+        background-color: rgb(40, 150, 58);
+        border-radius: 20px;
+        transition: width .5s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+ 
+
+}
+.fotoPerfil{
+    z-index: 0;
+    align-content: center;
+    height: 100%;
+    transition: opacity .5s ease-in-out;
+
+    
+
+}
+.tarjetas:hover{
+    cursor: pointer;
+    .panel{
+        width: 100%;
+        transition: width .5s ease-in-out;
+        opacity: 1;
+    }
+    .fotoPerfil{
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+    }
+ 
+}
+
+/* E S P E C I E S */
+#Especies{
+    
+    text-align: center;
+    margin:5vw 10vw 0 ;
+    border-radius: 25px;
+}
+.tarjetaEspecie{
+    
+    border: 5px solid rgb(255, 255, 255);
+    position: relative;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 25px;
+    display: inline-block;
+    margin:2vw;
+    background-color: rgb(124, 200, 101);
+    overflow: hidden;
+   
+    .flow{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:0;
+        width: 100%;
+        position: absolute;
+        bottom:0;
+        background-color: rgb(255, 255, 255);
+        z-index: 1;
+        transition: height .8s ease-in-out;
+
+        h2{
+            opacity: 0;
+            transition:opacity .5s ease-in-out;
+        }
+        .slogan{
+            opacity: 0;
+            transition:opacity .5s ease-in-out;
+        }
+    }
+}
+.tarjetaEspecie:hover{
+    cursor: pointer;
+    border: 5px solid rgb(255, 132, 56);
+
+   .flow{
+    transition: height .5s ease-in-out;
+    height: 100%;
+   }
+   h2{
+    opacity: 1;
+    transition:opacity 1s ease-in-out;
+}
+.slogan{
+    opacity: 1;
+    transition:opacity 1s ease-in-out;
+}
+}
+
+
+footer{
+    background-color:rgb(40, 150, 58) ;
+
+}
+#elementosFooter{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    a{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        transition: all .2s ease-in-out;
+
+
+    }
+    a:hover{
+        color: rgb(0, 162, 255);
+        font-size: 22px;
+        transition: all .2s ease-in-out;
+    }
+}
+
+#map{
+    border: 3px solid rgb(255, 255, 255);
+    width: 20vw;
+    height: 15vw;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        transition: all .5s ease-in-out;
+        height: 100%;
+    }
+    
+}
+#map:hover{
+    cursor: pointer;
+    img{
+        height: 110%;
+        transition: all .5s ease-in-out;
+    }
+}
+#columnaRedesSociales,#columnaNav{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    gap: 1vw;
+
+}
+  
+  
