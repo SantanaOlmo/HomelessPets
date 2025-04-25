@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario para dar en adopción</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="presentation">
+    <h1>Formulario para dar en adopción una mascota</h1>
+    <p>Este formulario tiene como objetivo recopilar la información necesaria sobre la mascota que deseas poner en adopción. Los datos serán tratados de forma confidencial y únicamente utilizados para encontrarle un nuevo hogar responsable.</p>
+  </div>
+</header>
+
+<form class="form-container">
+  <h3>Datos del responsable actual</h3>
+  <hr />
+  <div class="form-row">
+    <div class="form-group">
+      <label for="nombre">Nombre <span class="required">*</span></label>
+      <input type="text" id="nombre" name="nombre" required />
+    </div>
+    <div class="form-group">
+      <label for="apellidos">Apellidos <span class="required">*</span></label>
+      <input type="text" id="apellidos" name="apellidos" required />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="direccion">Dirección <span class="required">*</span></label>
+      <input type="text" id="direccion" name="direccion" required />
+    </div>
+    <div class="form-group">
+      <label for="provincia">Provincia <span class="required">*</span></label>
+      <input type="text" id="provincia" name="provincia" required />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="telefono">Teléfono <span class="required">*</span></label>
+      <input type="tel" id="telefono" name="telefono" required />
+    </div>
+    <div class="form-group">
+      <label for="email">eMail <span class="required">*</span></label>
+      <input type="email" id="email" name="email" required />
+    </div>
+  </div>
+
+  <h3>Información de la mascota</h3>
+  <hr />
+  <div class="form-row">
+    <div class="form-group">
+      <label for="mascota-nombre">Nombre <span class="required">*</span></label>
+      <input type="text" id="mascota-nombre" name="mascota-nombre" required />
+    </div>
+    <div class="form-group">
+      <label for="mascota-raza">Raza</label>
+      <input type="text" id="mascota-raza" name="mascota-raza" />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="mascota-tamano">Tamaño</label>
+      <select id="mascota-tamano" name="mascota-tamano">
+        <option value="pequeno">Pequeño</option>
+        <option value="mediano">Mediano</option>
+        <option value="grande">Grande</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="mascota-edad">Edad (años)</label>
+      <input type="number" id="mascota-edad" name="mascota-edad" min="0" />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group" style="flex: 1; min-width: 100%;">
+      <label for="mascota-caracter">Comportamiento y carácter</label>
+      <textarea id="mascota-caracter" name="mascota-caracter" placeholder="¿Es sociable? ¿Tiene algún comportamiento especial?"></textarea>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group" style="flex: 1; min-width: 100%;">
+      <label for="mascota-salud">Estado de salud actual</label>
+      <textarea id="mascota-salud" name="mascota-salud" placeholder="¿Tiene alguna enfermedad o tratamiento veterinario en curso?"></textarea>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group" style="flex: 1; min-width: 100%;">
+      <label for="mascota-motivo">Motivo por el cual deseas darla en adopción <span class="required">*</span></label>
+      <textarea id="mascota-motivo" name="mascota-motivo" required></textarea>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group" style="flex: 1; min-width: 100%;">
+      <label for="mascota-esterilizado">¿Está esterilizado/a?</label>
+      <select id="mascota-esterilizado" name="mascota-esterilizado">
+        <option value="si">Sí</option>
+        <option value="no">No</option>
+        <option value="no-sabe">No lo sé</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-row" style="justify-content: center; margin-top: 20px;">
+    <button type="submit" class="submit-button">Enviar formulario</button>
+  </div>
+</form>
+</body>
+</html>
