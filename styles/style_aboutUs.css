@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .nombre-empresa {
+    font-weight: bold;
+    color: #00a651;
+    font-size: 1.2em;
+    padding: 10px;
+    text-align: center;
+    margin-left: 10px;
+  }
+  
+  .tarjeta {
+    width: 110%;
+    max-width: 480px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .tarjeta-header {
+    background-color: #00a651;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .presentacion {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: left;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  
+  .boton-donar {
+    background-color: #51d691;
+    max-width: 180px;
+    max-height: 90px;
+    border-radius: 10px;
+    width: 500px;
+    height: 250px;
+    margin: 80px;
+    border: transparent;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+
+  .footer {
+    background-color: #00a84f;
+    position: relative;
+    padding-top: 120px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cesped {
+    background-size: cover;
+    height: 120px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px 20px;
+}
+
+.mapa {
+    width: 450px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.footer-menu li {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+  
