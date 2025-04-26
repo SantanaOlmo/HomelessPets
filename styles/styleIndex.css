@@ -15,7 +15,7 @@ header {
     height: 80px;           /* ajusta al alto que necesites */
     background: linear-gradient(
       to bottom,
-      rgba(78, 153, 53, 0.6),
+      rgb(28, 202, 255),
       rgba(255, 255, 255, 0)
     );
     z-index: 10;             
@@ -46,7 +46,7 @@ header {
   
   /* Empuja el contenido del main hacia arriba para que asome por debajo del header */
 main {
-    
+    margin: 0;
     height: 500vh;
   
   }
@@ -78,22 +78,22 @@ main {
     background-color: rgb(255, 255, 255);
     height: 50vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    background-color: rgb(255, 132, 56);
-    
+    background-color: rgb(0, 153, 255); 
+    background-repeat: repeat;
+    background-size:20vw;
 }
 #tituloRecienLlegados{
-    width:2vw;
-    font-size: 1.81vw;
+    top: 0;
+
+    width: 100%;
+    text-align: center;
+    font-size: 3vw;
     font-weight: 900;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 153, 255);
     margin: 0;
-    text-align: left;
     z-index: 10;
-    writing-mode: vertical-lr;
-    text-orientation:sideways-right;
-    rotate: 180deg;
     
 }
 #cajaRecienLlegados{
@@ -127,7 +127,7 @@ main {
         top: 0;
         left: 0px;
         z-index: 2;
-        background-color: rgb(40, 150, 58);
+        background-color: rgb(0, 153, 255);
         border-radius: 20px;
         transition: width .5s ease-in-out;
         display: flex;
@@ -171,14 +171,14 @@ main {
 }
 .tarjetaEspecie{
     
-    border: 5px solid rgb(255, 255, 255);
+    border: 5px solid  rgb(28, 202, 255);
     position: relative;
     width: 12vw;
     height: 12vw;
     border-radius: 25px;
     display: inline-block;
     margin:2vw;
-    background-color: rgb(124, 200, 101);
+    background-color:  rgb(28, 202, 255);
     overflow: hidden;
    
     .flow{
@@ -206,7 +206,7 @@ main {
 }
 .tarjetaEspecie:hover{
     cursor: pointer;
-    border: 5px solid rgb(255, 132, 56);
+    border: 5px solid rgb(28, 202, 255);
 
    .flow{
     transition: height .5s ease-in-out;
@@ -224,10 +224,11 @@ main {
 
 
 footer{
-    background-color:rgb(40, 150, 58) ;
+    background-image: linear-gradient( rgba(255, 255, 255, 0)10% , rgb(0, 125, 0));
 
 }
 #elementosFooter{
+    background-color: rgb(2, 137, 2);
     height: 60vh;
     display: flex;
     align-items: center;
@@ -275,6 +276,10 @@ footer{
     width: 15%;
     gap: 1vw;
 
+}
+#grass{
+    width: 100%;
+    bottom: 0;
 }
   
   
