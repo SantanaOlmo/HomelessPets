@@ -1,10 +1,20 @@
+
+.color1 { background-color: #bad326; } /* Lima Vibrante */
+.color2 { background-color: #d6e37b; } /* Amarillo Verdoso Pastel */
+.color3 { background-color: #566813; } /* Verde Oliva Oscuro */
+.color4 { background-color: #90ac5c; } /* Verde Pistacho */
+.color5 { background-color: #b8a97d; } /* Arena Suave */
+
+
+
+
 *{
     margin: 0;
     font-family: sans-serif;
     
 }
 body{
-    background-color: #FEF8F7;
+    background-color:#b8a97d;
 }
 
 header {
@@ -13,17 +23,15 @@ header {
     left: 0;
     width: 100%;
     height: 80px;           /* ajusta al alto que necesites */
-    background: linear-gradient(
-      to bottom,
-      rgb(28, 202, 255),
-      rgba(255, 255, 255, 0)
-    );
-    z-index: 10;             
+    background:linear-gradient(#90ac5c8a,rgba(255, 255, 255, 0));
+    z-index: 20;             
     display: flex;           
     align-items: center;
     justify-content:space-evenly;
     padding: 0 1rem;
-    
+    backdrop-filter: blur(10px); /* esto hace el efecto blur */
+    -webkit-backdrop-filter: blur(10px); /* soporte para Safari */
+
     img{
         width: 3%;
     }
@@ -39,7 +47,7 @@ header {
     .links:hover{
         font-size: 1.1vw;
         transition: all .2s ease-in-out;
-        color: rgb(23, 187, 228);
+        color: #566813; ;
     }
 
   }
@@ -53,18 +61,17 @@ main {
   
 #Inicio {
     margin-top: 0;
-    height: 95vh;
+    height: 85vh;
     position: relative;
     overflow: hidden;
-    background-image: url("/imgs/tortoiseFULL.png");
-    background-size:contain;
+    background-size:cover;
     background-position:top;
     background-repeat: no-repeat;
-    
     display: flex;
     align-items: center;
-    color: rgb(40, 150, 58);
+    color:  #90ac5c;
     font-weight: 900;
+   
     #slogan{
         margin-left: 8vw;
         width: 30vw;
@@ -74,44 +81,67 @@ main {
     
   }
 
+  .fraseRepetida-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background-color: #90ac5c;
+  }
+
+  .fraseRepetida-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: fraseRepetida 20s linear infinite;
+  }
+
+  .fraseRepetida-content span {
+    margin-right: 1rem; /* espacio entre frases */
+    font-size: 1.5rem;
+    color: #ffffff;;
+  }
+
+  @keyframes fraseRepetida {
+        0% {
+        transform: translateX(0);
+        }
+        100% {
+        transform: translateX(-50%);
+        }
+    }
+
 #RecienLlegados{
-    background-color: rgb(255, 255, 255);
-    height: 50vh;
+    top: 33vh;
+    width: 5vw;
+    right: 2vw;
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(0, 153, 255); 
-    background-repeat: repeat;
-    background-size:20vw;
-}
-#tituloRecienLlegados{
-    top: 0;
+    background-color: #566813; 
+    border-radius: 50px;
+    aspect-ratio: 1/3 ;
 
-    width: 100%;
-    text-align: center;
-    font-size: 3vw;
-    font-weight: 900;
-    color: rgb(0, 153, 255);
-    margin: 0;
-    z-index: 10;
-    
 }
+
+
 #cajaRecienLlegados{
     z-index: 0;
-    width:95vw;
-    height: 40vh;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content: space-evenly;
     align-items: center;
 }
+
 .tarjetas{
     position:relative;
     background-color: rgb(255, 255, 255);
     overflow: hidden;
-    border-radius: 20px;
-    width: 20%;
-    height: 90%;
+    border-radius: 100%;
+    width: 90%;
+    aspect-ratio: 1;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -127,7 +157,7 @@ main {
         top: 0;
         left: 0px;
         z-index: 2;
-        background-color: rgb(0, 153, 255);
+        background-color: #d6e37b;
         border-radius: 20px;
         transition: width .5s ease-in-out;
         display: flex;
@@ -171,14 +201,14 @@ main {
 }
 .tarjetaEspecie{
     
-    border: 5px solid  rgb(28, 202, 255);
+    border: 5px solid  #566813;;
     position: relative;
     width: 12vw;
     height: 12vw;
     border-radius: 25px;
     display: inline-block;
     margin:2vw;
-    background-color:  rgb(28, 202, 255);
+    background-color:  #d6e37b;
     overflow: hidden;
    
     .flow{
@@ -206,7 +236,7 @@ main {
 }
 .tarjetaEspecie:hover{
     cursor: pointer;
-    border: 5px solid rgb(28, 202, 255);
+    border: 5px solid #bad326;;
 
    .flow{
     transition: height .5s ease-in-out;
