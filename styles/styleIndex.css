@@ -161,7 +161,7 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: #566813; 
-    border-radius: 50px;
+    border-radius: 200px;
     border: .5vw solid #90ac5c;
     aspect-ratio: 1/3 ;
 

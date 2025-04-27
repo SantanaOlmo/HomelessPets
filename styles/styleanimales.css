@@ -1,6 +1,16 @@
+
+.color1 { background-color: #bad326; } /* Lima Vibrante */
+.color2 { background-color: #d6e37b; } /* Amarillo Verdoso Pastel */
+.color3 { background-color: #566813; } /* Verde Oliva Oscuro */
+.color4 { background-color: #90ac5c; } /* Verde Pistacho */
+.color5 { background-color: #b8a97d; } /* Arena Suave */
+
+
 /* Estructura general */
 *{
     margin: 0;
+    font-family: sans-serif;
+    
 }
 
 body {
