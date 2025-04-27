@@ -22,3 +22,16 @@ const imagenesFondo = [
   setInterval(cambiarFondo, 8000); // cambia cada 8 segundos
 
   cambiarFondo(); // llama una vez al principio para poner la primera imagen
+
+
+
+
+  const sidebar = document.getElementById('sidebar');
+
+  document.addEventListener('mousemove', function(e) {
+    if (e.clientX < 50) { // Si el mouse está a menos de 50px del borde izquierdo
+      sidebar.classList.add('active');
+    } else if (e.clientX > 250) { // Si se aleja más de 250px, esconder
+      sidebar.classList.remove('active');
+    }
+  });
