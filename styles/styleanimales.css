@@ -218,8 +218,7 @@ main {
         padding: 0.5em;
     }
 }
-
-
+/*-F O O T E R-----------------------------------------------*/
 footer{
     background-color: #566813;
 }
@@ -238,14 +237,15 @@ footer{
 
     }
     a:hover{
-        color: rgb(0, 162, 255);
+        color:#bad326;
         font-size: 22px;
-        transition: all .2s ease-in-out;
+        transition: all .1s ease-in-out;
+      
     }
 }
 
 #map{
-    border: 3px solid rgb(255, 255, 255);
+    border: 3px solid #bad326;;
     width: 20vw;
     height: 15vw;
     overflow: hidden;
@@ -253,25 +253,52 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    img{
-        transition: all .5s ease-in-out;
-        height: 100%;
-    }
-    
+   
 }
-#map:hover{
-    cursor: pointer;
-    img{
-        height: 110%;
-        transition: all .5s ease-in-out;
-    }
+.logoSocial{
+    fill: #90ac5c;
+    width: 40px;
+
 }
+
 #columnaRedesSociales,#columnaNav{
     display: flex;
     flex-direction: column;
     width: 15%;
     gap: 1vw;
+    
 
 }
+.filaSocial{
+    display: flex;
+    justify-content:left;
+    gap: 2vw;
+    align-items: center;
+}
+footer hr{
+    width: 75vw;
+    margin: auto;
+    background:#90ac5c;
+    border: none;
+    height: 2px;
 
-
+}
+#FooterFooter{
+    color: #90ac5c; 
+    text-align: center;
+    padding: 2vw 30vw;
+}
+#enlacesFinales{
+    margin-top: 1vw;
+    display: flex;
+    justify-content: space-evenly;
+    a{
+        text-decoration: none;
+        color:  #90ac5c;
+        
+    }
+    a:hover{
+        color:#bad326;
+    }
+    
+}

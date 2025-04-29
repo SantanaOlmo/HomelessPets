@@ -65,49 +65,87 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
   
+/*-F O O T E R-----------------------------------------------*/
+footer{
+  background-color: #566813;
+}
+#elementosFooter{
 
-  .footer {
-    background-color: #00a84f;
-    position: relative;
-    padding-top: 120px;
-    color: white;
-    text-align: center;
-    overflow: hidden;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  a{
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      transition: all .2s ease-in-out;
+
+
+  }
+  a:hover{
+      color:#bad326;
+      font-size: 22px;
+      transition: all .1s ease-in-out;
+    
+  }
 }
 
-.cesped {
-    background-size: cover;
-    height: 120px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+#map{
+  border: 3px solid #bad326;;
+  width: 20vw;
+  height: 15vw;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.logoSocial{
+  fill: #90ac5c;
+  width: 40px;
+
 }
 
-.contenido {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    padding: 40px 20px;
-}
-
-.mapa {
-    width: 450px;
-    height: auto;
-    border-radius: 20px;
-}
-
-.footer-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-}
-
-.footer-menu li {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
+#columnaRedesSociales,#columnaNav{
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  gap: 1vw;
   
+
+}
+.filaSocial{
+  display: flex;
+  justify-content:left;
+  gap: 2vw;
+  align-items: center;
+}
+footer hr{
+  width: 75vw;
+  margin: auto;
+  background:#90ac5c;
+  border: none;
+  height: 2px;
+
+}
+#FooterFooter{
+  color: #90ac5c; 
+  text-align: center;
+  padding: 2vw 30vw;
+}
+#enlacesFinales{
+  margin-top: 1vw;
+  display: flex;
+  justify-content: space-evenly;
+  a{
+      text-decoration: none;
+      color:  #90ac5c;
+      
+  }
+  a:hover{
+      color:#bad326;
+  }
+  
+}
