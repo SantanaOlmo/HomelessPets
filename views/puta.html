@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adopción de Perros</title>
+  <script type="module" src="app.js" defer></script>
+</head>
+<body>
+  <h1>Adopción de Perros</h1>
+
+  <h2>Iniciar Sesión</h2>
+  <input id="email" placeholder="Email" type="email">
+  <input id="password" placeholder="Contraseña" type="password">
+  <button id="loginBtn">Iniciar sesión</button>
+  <button id="logoutBtn">Cerrar sesión</button>
+
+  <h2>Agregar perro</h2>
+  <div id="formSection" style="display:none;">
+    <input id="nombre" placeholder="Nombre del perro">
+    <input id="edad" placeholder="Edad">
+    <textarea id="descripcion" placeholder="Descripción"></textarea>
+    <button id="agregarBtn">Agregar</button>
+  </div>
+
+  <h2>Perros en adopción</h2>
+  <ul id="listaPerros"></ul>
+
+</body>
+</html>
