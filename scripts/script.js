@@ -5,6 +5,7 @@ const imagenesFondo = [
     "url('imgs/InicioBackground/tortoisefull.png')",
   ];
 
+  
   let index = 0;
 
  
