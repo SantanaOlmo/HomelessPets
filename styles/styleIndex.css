@@ -305,7 +305,7 @@ main {
 
 #darEnAdopcion{
     position: relative;
-    background-image: url(/imgs/InicioBackground/sadPerro.png);
+    background-image: url(imgs/InicioBackground/sadPerro.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
