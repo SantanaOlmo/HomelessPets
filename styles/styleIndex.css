@@ -1,48 +1,94 @@
+
+.color1 { background-color: #bad326; } /* Lima Vibrante */
+.color2 { background-color: #d6e37b; } /* Amarillo Verdoso Pastel */
+.color3 { background-color: #566813; } /* Verde Oliva Oscuro */
+.color4 { background-color: #90ac5c; } /* Verde Pistacho */
+.color5 { background-color: #b8a97d; } /* Arena Suave */
+
+
+
+
 *{
     margin: 0;
     font-family: sans-serif;
     
 }
 body{
-    background-color: #FEF8F7;
+
 }
 
 header {
-    position: fixed;        /* fija en la parte superior del viewport */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;           /* ajusta al alto que necesites */
-    background: linear-gradient(
-      to bottom,
-      rgb(28, 202, 255),
-      rgba(255, 255, 255, 0)
-    );
-    z-index: 10;             
-    display: flex;           
+    height: 80px; 
+    background: linear-gradient(#90ac5c8a, rgba(255, 255, 255, 0));
+    z-index: 20;
+    display: flex;
     align-items: center;
-    justify-content:space-evenly;
-    padding: 0 1rem;
-    
-    img{
-        width: 3%;
-    }
-    .links{
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        text-align: center;
-        font-size: 1vw;
-        font-weight: 900;        
-        transition: all .2s ease-in-out;
+    justify-content: space-evenly;
 
-    }
-    .links:hover{
-        font-size: 1.1vw;
-        transition: all .2s ease-in-out;
-        color: rgb(23, 187, 228);
-    }
+    padding: 0 2rem 0 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: height 0.3s ease; /* Transición suave al cambiar altura */
+    overflow:visible; /* Para que los submenús no sobresalgan */
+}
 
-  }
+
+header img {
+    width: 3%;
+}
+
+.links {
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1em;
+    font-weight: 900;
+    transition: all .2s ease-in-out;
+}
+
+.links:hover {
+    font-size: 1.1vw;
+    transition: all .2s ease-in-out;
+    color: #566813;
+    cursor:pointer;
+}
+
+/* Submenú oculto */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(90, 110, 50, 0.9);
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 150px;
+    text-align: left;
+}
+
+/* Mostrar el submenú solo en hover */
+.links:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    font-size: 0.9vw;
+}
+
+.submenu a:hover {
+    color: #c7db6c;
+}
+
+
   
   /* Empuja el contenido del main hacia arriba para que asome por debajo del header */
 main {
@@ -51,20 +97,21 @@ main {
   
   }
   
+
+
 #Inicio {
     margin-top: 0;
-    height: 95vh;
+    height: 85vh;
     position: relative;
     overflow: hidden;
-    background-image: url("/imgs/tortoiseFULL.png");
-    background-size:contain;
+    background-size:cover;
     background-position:top;
     background-repeat: no-repeat;
-    
     display: flex;
     align-items: center;
-    color: rgb(40, 150, 58);
+    color:  #90ac5c;
     font-weight: 900;
+   
     #slogan{
         margin-left: 8vw;
         width: 30vw;
@@ -74,44 +121,71 @@ main {
     
   }
 
+  .fraseRepetida-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background-color: #90ac5c;
+  }
+
+  .fraseRepetida-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: fraseRepetida 20s linear infinite;
+  }
+
+  .fraseRepetida-content span {
+    margin-right: 1rem; /* espacio entre frases */
+    font-size: 1.5rem;
+    color: #ffffff;;
+  }
+
+  @keyframes fraseRepetida {
+        0% {
+        transform: translateX(0);
+        }
+        100% {
+        transform: translateX(-50%);
+        }
+    }
+
+
+
+/*-------A S I D E   D E R E C H A--------------------------------------------------*/
 #RecienLlegados{
-    background-color: rgb(255, 255, 255);
-    height: 50vh;
+    top: 33vh;
+    width: 5vw;
+    right: 2vw;
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(0, 153, 255); 
-    background-repeat: repeat;
-    background-size:20vw;
-}
-#tituloRecienLlegados{
-    top: 0;
+    background-color: #566813; 
+    border-radius: 200px;
+    border: .5vw solid #90ac5c;
+    aspect-ratio: 1/3 ;
+    z-index: 2;
 
-    width: 100%;
-    text-align: center;
-    font-size: 3vw;
-    font-weight: 900;
-    color: rgb(0, 153, 255);
-    margin: 0;
-    z-index: 10;
-    
 }
+
 #cajaRecienLlegados{
     z-index: 0;
-    width:95vw;
-    height: 40vh;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content: space-evenly;
     align-items: center;
 }
+
 .tarjetas{
     position:relative;
     background-color: rgb(255, 255, 255);
     overflow: hidden;
-    border-radius: 20px;
-    width: 20%;
-    height: 90%;
+    border-radius: 100%;
+    width: 90%;
+    aspect-ratio: 1;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -127,7 +201,7 @@ main {
         top: 0;
         left: 0px;
         z-index: 2;
-        background-color: rgb(0, 153, 255);
+        background-color: #d6e37b;
         border-radius: 20px;
         transition: width .5s ease-in-out;
         display: flex;
@@ -162,23 +236,27 @@ main {
  
 }
 
+
 /* E S P E C I E S */
 #Especies{
-    
     text-align: center;
-    margin:5vw 10vw 0 ;
-    border-radius: 25px;
+    padding:2vw 10vw;
+    /*background-color:#b8a97d;*/
+    background-image: url(/imgs/logos/fondo.png);
+    background-repeat: repeat;
+    background-size: 30vw;
+
 }
 .tarjetaEspecie{
-    
-    border: 5px solid  rgb(28, 202, 255);
+
+    border: 5px solid  #566813;;
     position: relative;
     width: 12vw;
     height: 12vw;
     border-radius: 25px;
     display: inline-block;
     margin:2vw;
-    background-color:  rgb(28, 202, 255);
+    background-color:  #d6e37b;
     overflow: hidden;
    
     .flow{
@@ -206,7 +284,7 @@ main {
 }
 .tarjetaEspecie:hover{
     cursor: pointer;
-    border: 5px solid rgb(28, 202, 255);
+    border: 5px solid #bad326;;
 
    .flow{
     transition: height .5s ease-in-out;
@@ -223,12 +301,50 @@ main {
 }
 
 
-footer{
-    background-image: linear-gradient( rgba(255, 255, 255, 0)10% , rgb(0, 125, 0));
+/* --P O N E R   E N   A D O P C I O N-------------------------------------------------*/
 
+#darEnAdopcion{
+    position: relative;
+    background-image: url(/imgs/InicioBackground/sadPerro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 85vh;
+    color:#566813;
+   
+}
+#frases{
+    padding-left: 4vw;
+    padding-top: 4vw;
+    h1{
+        font-size: 40px;
+    }
+    p{
+        text-align: center;
+        font-size: 20px;
+    }
+}
+#ponerEnAdopcionButton{
+    
+    position: absolute;
+    font-size: 1vw;
+    font-weight: 900;
+    padding: 1vw 2vw;
+    box-shadow: inset -2px -5px 1px 0px rgba(7, 53, 26, 0.421);
+    bottom: 4vw;
+    left: 4vw;
+    background-color: #90ac5c;
+    color: white;
+    border-radius: 50px;
+    border: none;
+}
+
+
+footer{
+    background-color: #566813;
 }
 #elementosFooter{
-    background-color: rgb(2, 137, 2);
+
     height: 60vh;
     display: flex;
     align-items: center;
@@ -249,7 +365,7 @@ footer{
 }
 
 #map{
-    border: 3px solid rgb(255, 255, 255);
+    border: 3px solid #bad326;;
     width: 20vw;
     height: 15vw;
     overflow: hidden;
@@ -257,29 +373,55 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    img{
-        transition: all .5s ease-in-out;
-        height: 100%;
-    }
-    
+   
 }
-#map:hover{
-    cursor: pointer;
-    img{
-        height: 110%;
-        transition: all .5s ease-in-out;
-    }
+.logoSocial{
+    fill: #90ac5c;
+    width: 40px;
+
 }
+
 #columnaRedesSociales,#columnaNav{
     display: flex;
     flex-direction: column;
     width: 15%;
     gap: 1vw;
+    
 
 }
-#grass{
-    width: 100%;
-    bottom: 0;
+.filaSocial{
+    display: flex;
+    justify-content:left;
+    gap: 2vw;
+    align-items: center;
 }
+footer hr{
+    width: 75vw;
+    margin: auto;
+    background:#90ac5c;
+    border: none;
+    height: 2px;
+
+}
+#FooterFooter{
+    color: #90ac5c; 
+    text-align: center;
+    padding: 2vw 30vw;
+}
+#enlacesFinales{
+    margin-top: 1vw;
+    display: flex;
+    justify-content: space-evenly;
+    a{
+        text-decoration: none;
+        color:  #90ac5c;
+        
+    }
+    a:hover{
+        color:#bad326;
+    }
+    
+}
+
   
   
