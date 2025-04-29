@@ -13,7 +13,7 @@
 }
 body {
     font-family: Arial, sans-serif;
-    background-image: url(..\imgs\logos\fondo.png);
+    background-image: url(imgs/logos/fondo.png);
     background-size: 30vw;
     display: flex;
     flex-direction: column;
