@@ -13,10 +13,9 @@
     font-family: sans-serif;
     
 }
-body{
 
-}
 
+/*--H E A D E R-------------------------------*/
 header {
     position: fixed;
     top: 0;
@@ -91,16 +90,13 @@ header img {
 }
 
 
-  
-  /* Empuja el contenido del main hacia arriba para que asome por debajo del header */
+/*----M A I N----------------------*/
 main {
     margin: 0;
     height: 100%;
   
   }
   
-
-
 #Inicio {
     margin-top: 0;
     height: 85vh;
@@ -244,7 +240,7 @@ main {
     text-align: center;
     padding:2vw 10vw;
     /*background-color:#b8a97d;*/
-    background-image: url(/imgs/logos/fondo.png);
+    background-image: url(../imgs/logos/fondo.png);
     background-repeat: repeat;
     background-size: 30vw;
 
