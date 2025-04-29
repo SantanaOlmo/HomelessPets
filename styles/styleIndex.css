@@ -93,7 +93,7 @@ header img {
   /* Empuja el contenido del main hacia arriba para que asome por debajo del header */
 main {
     margin: 0;
-    height: 500vh;
+    height: 100%;
   
   }
   
@@ -314,14 +314,17 @@ main {
    
 }
 #frases{
+    position: absolute;
     padding-left: 4vw;
     padding-top: 4vw;
     h1{
-        font-size: 40px;
+        font-size: 5.5vw;
+        width: 50vw;
     }
     p{
-        text-align: center;
-        font-size: 20px;
+        margin-top: 1vw;
+        text-align: left;
+        font-size: 2vw;
     }
 }
 #ponerEnAdopcionButton{
@@ -337,11 +340,17 @@ main {
     color: white;
     border-radius: 50px;
     border: none;
+    cursor: pointer;
 }
 
 
+/*-F O O T E R-----------------------------------------------*/
 footer{
     background-color: #566813;
+}
+#color{
+    background-color: #90ac5c;
+    height: 1vw;
 }
 #elementosFooter{
 
@@ -358,9 +367,10 @@ footer{
 
     }
     a:hover{
-        color: rgb(0, 162, 255);
+        color:#bad326;
         font-size: 22px;
-        transition: all .2s ease-in-out;
+        transition: all .1s ease-in-out;
+      
     }
 }
 

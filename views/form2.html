@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario para poner en adopción un perro</title>
+  <link rel="stylesheet" href="/styles/styleForm.css" />
+</head>
+<body>
+
+<header>
+    <div class="presentation">
+        <h1>Formulario para poner en adopción un perro</h1>
+        <p>Si deseas poner en adopción a un perro, por favor completa este formulario con toda la información necesaria. Tu colaboración es muy importante para encontrarle un hogar adecuado.</p>
+    </div>
+</header>
+
+<form class="form-container" enctype="multipart/form-data">
+    <h3>Datos del propietario</h3>
+    <hr />
+    <div class="form-row">
+        <div class="form-group">
+            <label for="nombre">Nombre <span class="required">*</span></label>
+            <input type="text" id="nombre" name="nombre" required />
+        </div>
+        <div class="form-group">
+            <label for="apellidos">Apellidos <span class="required">*</span></label>
+            <input type="text" id="apellidos" name="apellidos" required />
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="fecha">Fecha de nacimiento <span class="required">*</span></label>
+            <input type="date" id="fecha" name="fecha" required />
+        </div>
+        <div class="form-group">
+            <label for="direccion">Dirección <span class="required">*</span></label>
+            <input type="text" id="direccion" name="direccion" required />
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="telefonos">Teléfonos <span class="required">*</span></label>
+            <input type="tel" id="telefonos" name="telefonos" required />
+        </div>
+        <div class="form-group">
+            <label for="email">eMail <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required />
+        </div>
+    </div>
+
+    <h3>Datos del Perro</h3>
+    <hr />
+    <div class="form-row">
+        <div class="form-group">
+            <label for="perro-nombre">Nombre del perro</label>
+            <input type="text" id="perro-nombre" name="perro-nombre" />
+        </div>
+        <div class="form-group">
+            <label for="perro-raza">Raza</label>
+            <input type="text" id="perro-raza" name="perro-raza" />
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="perro-tamano">Tamaño</label>
+            <select id="perro-tamano" name="perro-tamano">
+                <option value="pequeno">Pequeño</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="perro-edad">Edad</label>
+            <input type="number" id="perro-edad" name="perro-edad" min="0" />
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="perro-imagen">Imagen del perro</label>
+            <input type="file" id="perro-imagen" name="perro-imagen" accept="image/*" />
+        </div>
+    </div>
+
+    <h3>Cuestionario sobre la adopción</h3>
+    <hr />
+    <div class="form-row">
+        <div class="form-group" style="flex: 1; min-width: 100%;">
+            <label for="p1">1. ¿Por qué quieres poner en adopción a tu perro? <span class="required">*</span></label>
+            <textarea id="p1" name="p1" required></textarea>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group" style="flex: 1; min-width: 100%;">
+            <label for="p2">2. ¿El perro ha tenido algún problema de salud importante? <span class="required">*</span></label>
+            <textarea id="p2" name="p2" required></textarea>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group" style="flex: 1; min-width: 100%;">
+            <label for="p3">3. ¿El perro está esterilizado? <span class="required">*</span></label>
+            <textarea id="p3" name="p3" required></textarea>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group" style="flex: 1; min-width: 100%;">
+            <label for="p4">4. ¿Tiene el perro algún comportamiento específico que deba tener en cuenta el futuro adoptante? <span class="required">*</span></label>
+            <textarea id="p4" name="p4" required></textarea>
+        </div>
+    </div>
+
+    <div class="form-row" style="justify-content: center; margin-top: 20px;">
+        <button type="submit" class="submit-button">Enviar formulario</button>
+    </div>
+</form>
+
+
+
+</body>
+</html>
