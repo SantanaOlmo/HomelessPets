@@ -1,7 +1,7 @@
 const imagenesFondo = [
-    "url('imgs/InicioBackground/perrosUpscale.png')",
-    "url('../imgs/InicioBackground/perro.png')",
-    "url('../imgs/InicioBackground/conejo.png')",
+    "url('../imgs/InicioBackground/perrosUpscale.png')",
+    "url('/imgs/InicioBackground/perro.png')",
+    "url('imgs/InicioBackground/conejo.png')",
     "url('../imgs/InicioBackground/tortoiseFULL.png')",
   ];
 
