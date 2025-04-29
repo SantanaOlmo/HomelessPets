@@ -27,7 +27,8 @@ header {
     z-index: 20;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 3em;
 
     padding: 0 2rem 0 2rem;
     backdrop-filter: blur(10px);
@@ -36,8 +37,9 @@ header {
     overflow:visible; /* Para que los submenús no sobresalgan */
 }
 
-
 header img {
+    position: fixed;
+    left: 2em;
     width: 3%;
 }
 
@@ -52,7 +54,7 @@ header img {
 }
 
 .links:hover {
-    font-size: 1.1vw;
+    font-size: 1.1em;
     transition: all .2s ease-in-out;
     color: #566813;
     cursor:pointer;
@@ -105,7 +107,7 @@ main {
     position: relative;
     overflow: hidden;
     background-size:cover;
-    background-position:top;
+    background-position:left;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -330,7 +332,9 @@ main {
 #ponerEnAdopcionButton{
     
     position: absolute;
-    font-size: 1vw;
+    font-size: 1em;
+    min-width: 200px;
+    min-height: 50px;
     font-weight: 900;
     padding: 1vw 2vw;
     box-shadow: inset -2px -5px 1px 0px rgba(7, 53, 26, 0.421);
@@ -388,6 +392,7 @@ footer{
 .logoSocial{
     fill: #90ac5c;
     width: 40px;
+    min-width: 20px;
 
 }
 

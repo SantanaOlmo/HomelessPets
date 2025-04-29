@@ -5,7 +5,7 @@ const imagenesFondo = [
     "url('imgs/InicioBackground/tortoisefull.png')",
   ];
 
-  
+
   let index = 0;
 
  
@@ -14,7 +14,7 @@ const imagenesFondo = [
     if (inicio) {
       inicio.style.backgroundImage = imagenesFondo[index];
       inicio.style.backgroundSize = "cover";
-      inicio.style.backgroundPosition = "center";
+      inicio.style.backgroundPosition = "60%";
       inicio.style.transition = "background-image 1s ease-in-out"; // transición suave
       index = (index + 1) % imagenesFondo.length;
     }

@@ -13,7 +13,8 @@
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(40, 150, 58);
+    background-image: url(../imgs/logos/fondo.png);
+    background-size: 30vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +34,7 @@ body {
 
   }
   .form-container {
-    background-color: #d0def0;
+    background-color: #b8a97d;
     padding: 20px;
     border-radius: 10px;
     width: 100%;
@@ -85,7 +86,7 @@ body {
   }
 
   .submit-button {
-    background-color: #4CAF50;
+    background-color:  #90ac5c;;
     color: white;
     padding: 12px 25px;
     border: none;
@@ -95,7 +96,7 @@ body {
   }
   
   .submit-button:hover {
-    background-color: #45a049;
+    background-color:   #bad326;
   }
 
   /*-F O O T E R-----------------------------------------------*/
