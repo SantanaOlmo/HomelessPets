@@ -2,21 +2,24 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
-// Tu configuración de Firebase (cópiala desde la consola de Firebase)
 const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_AUTH_DOMAIN",
-  projectId: "TU_PROJECT_ID",
-  storageBucket: "TU_STORAGE_BUCKET",
-  messagingSenderId: "TU_SENDER_ID",
-  appId: "TU_APP_ID"
+  apiKey: "AIzaSyD5anzloDrlFRR_XiEgIwnucLRnJs6vJP0",
+  authDomain: "homelesspets-70a83.firebaseapp.com",
+  projectId: "homelesspets-70a83",
+  storageBucket: "homelesspets-70a83.firebasestorage.app",
+  messagingSenderId: "156296592768",
+  appId: "1:156296592768:web:ed47bb5c0aa7b15a55d565",
+  measurementId: "G-JBR6M4XMJD"
 };
 
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const storage = getStorage(app);
+
 
 // Elementos
 const email = document.getElementById("email");

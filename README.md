@@ -10,6 +10,7 @@
 
 #### Configuracion del repositorio con Firebase(firebase init hosting:github)
 
+Cuando habíamos comprobado que funcionaba el dominio ofrecido por firebase y que se recogían los datos correctamente en la base de datos, nos planteamos cómo se actualizaba la página. La cuestión es que debía actualizarse mediante la implementación de un repositorio en el proyecto de firebase. Esto lo hicimos a partir del comando _firebase init hosting:github_  en bash. 
 ```
 C:\Users\alber\Desktop\paginasWeb\HomelessPets
 
