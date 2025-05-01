@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Imágenes subidas a Firestore</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    .imagen-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .imagen-container img {
+      max-width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Galería de Imágenes desde Firestore</h1>
+  <div class="imagen-container" id="contenedor-imagenes"></div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyD5anzloDrlFRR_XiEgIwnucLRnJs6vJP0",
+      authDomain: "homelesspets-70a83.firebaseapp.com",
+      projectId: "homelesspets-70a83",
+      storageBucket: "homelesspets-70a83.appspot.com",
+      messagingSenderId: "156296592768",
+      appId: "1:156296592768:web:ed47bb5c0aa7b15a55d565",
+      measurementId: "G-JBR6M4XMJD"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const contenedor = document.getElementById("contenedor-imagenes");
+
+    async function cargarImagenes() {
+      const querySnapshot = await getDocs(collection(db, "imagenesConNombre"));
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        if (data.imagenBase64) {
+          const img = document.createElement("img");
+          img.src = data.imagenBase64;
+          contenedor.appendChild(img);
+        }
+      });
+    }
+
+    cargarImagenes();
+  </script>
+</body>
+</html>

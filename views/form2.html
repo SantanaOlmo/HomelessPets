@@ -120,22 +120,25 @@
         <button type="submit" class="submit-button">Enviar formulario</button>
     </div>
 </form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subir imagen a Firestore</title>
+</head>
+<body>
+  <form id="formulario">
+    <input type="text" id="nombre" placeholder="Nombre" required />
+    <input type="file" id="imagen" accept="image/*" required />
+    <button type="submit">Enviar</button>
+  </form>
+  <p id="estado"></p>
 
-<script type="module">
+  <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
-    import {
-      getFirestore,
-      collection,
-      addDoc
-    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-    import {
-      getStorage,
-      ref,
-      uploadBytes,
-      getDownloadURL
-    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-storage.js";
-  
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
     const firebaseConfig = {
       apiKey: "AIzaSyD5anzloDrlFRR_XiEgIwnucLRnJs6vJP0",
       authDomain: "homelesspets-70a83.firebaseapp.com",
@@ -145,69 +148,48 @@
       appId: "1:156296592768:web:ed47bb5c0aa7b15a55d565",
       measurementId: "G-JBR6M4XMJD"
     };
-  
+
     const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
     const db = getFirestore(app);
-    const storage = getStorage(app);
-  
-    const form = document.querySelector("form");
-  
+
+    const form = document.getElementById("formulario");
+    const estado = document.getElementById("estado");
+
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-  
-      const fileInput = document.getElementById("perro-imagen");
-      const file = fileInput.files[0];
-      let imageUrl = "";
-  
-      if (file) {
+
+      const nombre = document.getElementById("nombre").value;
+      const archivo = document.getElementById("imagen").files[0];
+
+      if (!archivo) {
+        estado.textContent = "Selecciona una imagen.";
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onloadend = async () => {
+        const base64Image = reader.result; // Esto incluye el encabezado "data:image/jpeg;base64,..."
+
         try {
-          const storageRef = ref(storage, `perros/${Date.now()}_${file.name}`);
-          await uploadBytes(storageRef, file);
-          imageUrl = await getDownloadURL(storageRef);
-          alert("Imagen subida");
+          await addDoc(collection(db, "imagenesConNombre"), {
+            nombre: nombre,
+            imagenBase64: base64Image,
+            fecha: new Date().toISOString()
+          });
+          estado.textContent = "Formulario enviado con imagen base64 ✅";
+          form.reset();
         } catch (error) {
-            console.error("Error al subir la imagen:", error.code || error.message || error);
-            alert("No se pudo subir la imagen. Intenta de nuevo.");
-          return;
+          console.error("Error al guardar en Firestore:", error);
+          estado.textContent = "Error al enviar el formulario.";
         }
-      }
-  
-      const datosFormulario = {
-        propietario: {
-          nombre: document.getElementById("nombre").value,
-          apellidos: document.getElementById("apellidos").value,
-          fechaNacimiento: document.getElementById("fecha").value,
-          direccion: document.getElementById("direccion").value,
-          telefonos: document.getElementById("telefonos").value,
-          email: document.getElementById("email").value,
-        },
-        perro: {
-          nombre: document.getElementById("perro-nombre").value,
-          raza: document.getElementById("perro-raza").value,
-          tamano: document.getElementById("perro-tamano").value,
-          edad: document.getElementById("perro-edad").value,
-          imagenUrl: imageUrl,
-        },
-        cuestionario: {
-          motivoAdopcion: document.getElementById("p1").value,
-          salud: document.getElementById("p2").value,
-          esterilizado: document.getElementById("p3").value,
-          comportamiento: document.getElementById("p4").value,
-        },
-        fechaEnvio: new Date().toISOString()
       };
-  
-      try {
-        await addDoc(collection(db, "formulariosAdopcion"), datosFormulario);
-        alert("Formulario enviado correctamente 🎉");
-        form.reset();
-      } catch (error) {
-        console.error("Error al guardar los datos:", error);
-        alert("Error al enviar el formulario. Intenta más tarde.");
-      }
+
+      reader.readAsDataURL(archivo);
     });
   </script>
+</body>
+</html>
+
   
   
   
