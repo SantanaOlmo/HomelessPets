@@ -6,7 +6,7 @@
   <title>Prueba de subida de imagen a Firebase Storage</title>
 </head>
 <body>
-  <h1>Prueba de subida de imagen</h1>
+  <h1>Nueva prueba de subida de imagen</h1>
   <input type="file" id="imagen" />
   <button id="subir">Subir imagen</button>
   <p id="estado"></p>
@@ -15,6 +15,7 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
     import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-storage.js";
 
+    // Configuración del proyecto Firebase
     const firebaseConfig = {
       apiKey: "AIzaSyD5anzloDrlFRR_XiEgIwnucLRnJs6vJP0",
       authDomain: "homelesspets-70a83.firebaseapp.com",
@@ -25,9 +26,11 @@
       measurementId: "G-JBR6M4XMJD"
     };
 
+    // Inicializar Firebase
     const app = initializeApp(firebaseConfig);
-    const storage = getStorage(app);
+    const storage = getStorage(app); // Asociar el storage al app por claridad
 
+    // Evento al hacer clic en "Subir imagen"
     document.getElementById("subir").addEventListener("click", async () => {
       const archivo = document.getElementById("imagen").files[0];
       const estado = document.getElementById("estado");
@@ -37,18 +40,21 @@
         return;
       }
 
-      const nombreArchivo = `pruebas/${Date.now()}_${archivo.name}`;
-      const referencia = ref(storage, nombreArchivo);
+      // Crear una referencia organizada en la carpeta 'pruebas'
+      const archivoNombre = archivo.name;
+      const rutaStorage = `pruebas/${Date.now()}_${archivoNombre}`;
+      const archivoRef = ref(storage, rutaStorage); // <== estilo oficial
 
       try {
         estado.textContent = "Subiendo imagen...";
-        await uploadBytes(referencia, archivo);
-        const url = await getDownloadURL(referencia);
-        estado.textContent = "Imagen subida correctamente. URL: " + url;
-        console.log("Imagen subida:", url);
+        await uploadBytes(archivoRef, archivo);
+        const url = await getDownloadURL(archivoRef);
+        estado.innerHTML = `✅ Imagen subida correctamente. <br><a href="${url}" target="_blank">${url}</a>`;
+        console.log("URL de imagen:", url);
       } catch (error) {
+        alert("Error al subir la imagen:", error);
         console.error("Error al subir la imagen:", error);
-        estado.textContent = "Error al subir la imagen: " + (error.message || error);
+        estado.textContent = "❌ Error al subir la imagen: " + error.message;
       }
     });
   </script>
