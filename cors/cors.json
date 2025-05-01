@@ -1,6 +1,6 @@
 [
     {
-      "origin": ["https://homelesspets-70a83.web.app", "https://homelesspets-70a83.firebaseapp.com"],
+      "origin": ["*"],
       "method": ["GET", "POST", "PUT", "HEAD", "DELETE"],
       "maxAgeSeconds": 3600,
       "responseHeader": ["Content-Type", "Authorization"]
