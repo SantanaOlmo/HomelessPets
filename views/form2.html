@@ -165,6 +165,7 @@
           const storageRef = ref(storage, `perros/${Date.now()}_${file.name}`);
           await uploadBytes(storageRef, file);
           imageUrl = await getDownloadURL(storageRef);
+          alert("Imagen subida");
         } catch (error) {
           console.error("Error al subir la imagen:", error);
           alert("No se pudo subir la imagen. Intenta de nuevo.");
