@@ -3,17 +3,22 @@
       "origin": [
         "http://localhost:8080",
         "https://homelesspets-70a83.firebaseapp.com",
-        "https://homelesspets-70a83.web.app",
-        "https://homelesspets-70a83.web.app/views/pruebaImagen.html"
+        "https://homelesspets-70a83.web.app"
       ],
       "method": [
+        "POST",
         "GET",
         "PUT",
-        "POST",
         "DELETE"
+      ],
+      "responseHeader": [
+        "Content-Type",                 
+        "X-Firebase-Storage-Version",   
+        "X-Goog-Upload-Protocol",       
+        "Content-Disposition",          
+        "Firebase-Storage-Metadata"     
       ],
       "maxAgeSeconds": 3600
     }
-  ]
-  
-  
+]
+
