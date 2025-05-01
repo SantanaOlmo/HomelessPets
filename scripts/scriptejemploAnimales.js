@@ -21,3 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function pasarDatos(boton) {
+    const nombre = encodeURIComponent(boton.getAttribute('data-nombre'));
+    const raza = encodeURIComponent(boton.getAttribute('data-raza'));
+    const tamano = encodeURIComponent(boton.getAttribute('data-tamano'));
+    const edad = encodeURIComponent(boton.getAttribute('data-edad'));
+
+    const url = `form1.html?nombre=${nombre}&raza=${raza}&tamano=${tamano}&edad=${edad}`;
+    window.location.href = url;
+  }
