@@ -3,7 +3,8 @@
       "origin": [
         "http://localhost:8080",
         "https://homelesspets-70a83.firebaseapp.com",
-        "https://homelesspets-70a83.web.app"
+        "https://homelesspets-70a83.web.app",
+        "https://homelesspets-70a83.web.app/views/pruebaImagen.html"
       ],
       "method": [
         "GET",
