@@ -115,6 +115,7 @@
             <textarea id="p4" name="p4" required></textarea>
         </div>
     </div>
+    <div id="estado" style="text-align:center; margin: 20px; color: green;"></div>
 
     <div class="form-row" style="justify-content: center; margin-top: 20px;">
         <button type="submit" class="submit-button">Enviar formulario</button>
@@ -122,10 +123,11 @@
 </form>
 
 
-  <script type="module">
+ 
+<script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
     import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
+  
     const firebaseConfig = {
       apiKey: "AIzaSyD5anzloDrlFRR_XiEgIwnucLRnJs6vJP0",
       authDomain: "homelesspets-70a83.firebaseapp.com",
@@ -135,42 +137,58 @@
       appId: "1:156296592768:web:ed47bb5c0aa7b15a55d565",
       measurementId: "G-JBR6M4XMJD"
     };
-
+  
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
-
+  
     const form = document.getElementById("formulario");
     const estado = document.getElementById("estado");
-
+  
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-
-      const nombre = document.getElementById("nombre").value;
+  
       const archivo = document.getElementById("imagen").files[0];
-
       if (!archivo) {
         estado.textContent = "Selecciona una imagen.";
+        estado.style.color = "red";
         return;
       }
-
+  
       const reader = new FileReader();
       reader.onloadend = async () => {
-        const base64Image = reader.result; // Esto incluye el encabezado "data:image/jpeg;base64,..."
-
+        const base64Image = reader.result;
+  
+        const data = {
+          nombre: document.getElementById("nombre").value,
+          apellidos: document.getElementById("apellidos").value,
+          fechaNacimiento: document.getElementById("fecha").value,
+          direccion: document.getElementById("direccion").value,
+          telefonos: document.getElementById("telefonos").value,
+          email: document.getElementById("email").value,
+          perroNombre: document.getElementById("perro-nombre").value,
+          perroRaza: document.getElementById("perro-raza").value,
+          perroTamano: document.getElementById("perro-tamano").value,
+          perroEdad: document.getElementById("perro-edad").value,
+          respuesta1: document.getElementById("p1").value,
+          respuesta2: document.getElementById("p2").value,
+          respuesta3: document.getElementById("p3").value,
+          respuesta4: document.getElementById("p4").value,
+          imagenBase64: base64Image,
+          fechaEnvio: new Date().toISOString()
+        };
+  
         try {
-          await addDoc(collection(db, "imagenesConNombre"), {
-            nombre: nombre,
-            imagenBase64: base64Image,
-            fecha: new Date().toISOString()
-          });
-          estado.textContent = "Formulario enviado con imagen base64 ✅";
+          await addDoc(collection(db, "formulariosAdopcion"), data);
+          estado.textContent = "✅ Formulario enviado correctamente.";
+          estado.style.color = "green";
           form.reset();
         } catch (error) {
           console.error("Error al guardar en Firestore:", error);
-          estado.textContent = "Error al enviar el formulario.";
+          estado.textContent = "❌ Error al enviar el formulario.";
+          estado.style.color = "red";
         }
       };
-
+  
       reader.readAsDataURL(archivo);
     });
   </script>
