@@ -1,9 +1,18 @@
 [
     {
-      "origin": ["*"],
-      "method": ["GET", "POST", "PUT", "HEAD", "DELETE"],
-      "maxAgeSeconds": 3600,
-      "responseHeader": ["Content-Type", "Authorization"]
+      "origin": [
+        "http://localhost:8080",
+        "https://homelesspets-70a83.firebaseapp.com",
+        "https://homelesspets-70a83.web.app"
+      ],
+      "method": [
+        "GET",
+        "PUT",
+        "POST",
+        "DELETE"
+      ],
+      "maxAgeSeconds": 3600
     }
   ]
+  
   
