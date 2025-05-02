@@ -89,7 +89,42 @@ header img {
     color: #c7db6c;
 }
 
-
+/*LOGIN*/
+  
+  .login-form input {
+    margin: 2px 0;
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+  
+  .login-form button {
+    margin-top: 4px;
+    padding: 4px 10px;
+    background-color: #489961;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  
+  .login-form button:hover {
+    background-color: #33d682;
+  }
+  
+  .login-links {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  .login-links a {
+    color: #0073e6;
+    text-decoration: none;
+    margin: 0 2px;
+  }
+  
+  .login-links a:hover {
+    text-decoration: underline;
+  }
 /*----M A I N----------------------*/
 main {
     margin: 0;
