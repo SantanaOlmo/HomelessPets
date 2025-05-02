@@ -95,7 +95,11 @@ header img {
 
 /*LOGIN*/
   
+<<<<<<< HEAD
 .login-form input {
+=======
+  .login-form input {
+>>>>>>> cb5c87928a9c4c828e46a506e3b10567c080f3ce
     margin: 2px 0;
     padding: 4px 8px;
     font-size: 10px;
@@ -129,8 +133,11 @@ header img {
   .login-links a:hover {
     text-decoration: underline;
   }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cb5c87928a9c4c828e46a506e3b10567c080f3ce
 /*----M A I N----------------------*/
 main {
     margin: 0;
