@@ -1,6 +1,17 @@
 
 ![](imgs/ReadmeHeader.png)
 
+## Cosas por hacer:
+
+1. Poner Header en todas los html PARA NAVEGABILIDAD
+2. Cuando pulses en la moneda que lleve a index.html
+3. Poner mensaje y redirigir a index.html despues de los 2 formulario
+4. Revisar footer margin-top
+5. Revisar todos los fondos de los html
+6. QUITAR LA MIERDA DE NUESTRA HISTORIA/EQUIPO/COLABORA
+7. poner bonito la 
+
+
 # [HOMELESS PETS](https://homelesspets-70a83.web.app/)
 [Presentación 25/04/2025](https://www.canva.com/design/DAGlpVrkK2c/GHTvgDYKoq8GquC2-molMQ/edit)
 
