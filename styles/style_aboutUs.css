@@ -12,33 +12,35 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background-image: url(/imgs/logos/fondo.png);
+    background-size: 30vw;
   }
   
   .nombre-empresa {
-    font-weight: bold;
-    color: #00a651;
-    font-size: 1.2em;
-    padding: 10px;
-    text-align: center;
-    margin-left: 10px;
+    margin-bottom: 100px;
+    padding: 22px;
+    background-color: #90ac5c;
+    color: white;
+    font-size: 4em;
+    font-family: sans-serif;
+    text-align: left;
   }
   
   .tarjeta {
     width: 110%;
-    max-width: 480px;
+    max-width: 680px; 
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .tarjeta-header {
-    background-color: #00a651;
+    background-color: #90ac5c;
     color: white;
     padding: 10px;
     font-weight: bold;
     text-align: left;
   }
+  
+
   
   .presentacion {
     background-color: #f0f0f0;
@@ -54,15 +56,23 @@ body {
   
   
   .boton-donar {
-    background-color: #51d691;
-    max-width: 180px;
+    background-color: #d6e37b;
+    max-width: 330px;
     max-height: 90px;
     border-radius: 10px;
     width: 500px;
     height: 250px;
     margin: 80px;
     border: transparent;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    a{
+      text-decoration: none;
+      color:  #90ac5c;
+      
+  }
+  a:hover{
+      color:#566813;
+  }
   }
   
 /*-F O O T E R-----------------------------------------------*/
@@ -149,3 +159,4 @@ footer hr{
   }
   
 }
+
