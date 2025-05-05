@@ -1,12 +1,10 @@
 
-.color1 { background-color: #bad326; } /* Lima Vibrante */
-.color2 { background-color: #d6e37b; } /* Amarillo Verdoso Pastel */
-.color3 { background-color: #566813; } /* Verde Oliva Oscuro */
-.color4 { background-color: #90ac5c; } /* Verde Pistacho */
-.color5 { background-color: #b8a97d; } /* Arena Suave */
-
 :root{
     --color-lima:#bad326;
+    --color-pastel:#d6e37b;
+    --color-oliva:#566813;
+    --color-pistacho:#90ac5c;
+    --color-arena:#b8a97d;
 }
 
 
@@ -94,12 +92,7 @@ header img {
 }
 
 /*LOGIN*/
-  
-<<<<<<< HEAD
-.login-form input {
-=======
   .login-form input {
->>>>>>> cb5c87928a9c4c828e46a506e3b10567c080f3ce
     margin: 2px 0;
     padding: 4px 8px;
     font-size: 10px;
@@ -133,11 +126,8 @@ header img {
   .login-links a:hover {
     text-decoration: underline;
   }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> cb5c87928a9c4c828e46a506e3b10567c080f3ce
 /*----M A I N----------------------*/
 main {
     margin: 0;
@@ -195,7 +185,6 @@ main {
         transform: translateX(-50%);
         }
     }
-
 
 
 /*-------A S I D E   D E R E C H A--------------------------------------------------*/
