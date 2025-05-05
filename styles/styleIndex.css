@@ -282,8 +282,16 @@ main {
     background-size: 30vw;
 
 }
+.tarjetaEspecie svg{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
 .tarjetaEspecie{
 
+    
     border: 5px solid  #566813;;
     position: relative;
     width: 12vw;
