@@ -273,7 +273,7 @@ main {
 
 #menu {
     position: sticky;
-    top: 1em;
+    top: 5em;
     align-self: start;
     border-radius: 25px;
     padding: 1em;
@@ -311,7 +311,7 @@ main {
     background-color: white;
     border: #e6dbb9 0.5em solid;
     border-radius: 25px;
-    height: 28em;
+    height: 31em;
 }
 
 

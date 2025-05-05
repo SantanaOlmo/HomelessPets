@@ -5,80 +5,223 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styleanimales.css">
+    <link rel="stylesheet" href="../styles/styleanimales.css">
 </head>
 
 <body>
-    <header id="cabecera">
-        <h1>Gatos</h1>
+    <header>
+        <a id="imagen" href="../index.html">
+            <img src="../imgs/logo1.png" alt="logo">
+        </a>
+        
+      
+        <div class="links">
+          Animales
+          <div class="submenu">
+            <a href="ejemploPerro.html">Perros</a>
+            <a href="ejemploGato.html">Gatos</a>
+            <a href="ejemploRoedor.html">Roedores</a>
+            <a href="ejemploAve.html">Aves</a>
+            <a href="ejemploReptil.html">Reptiles</a>
+            <a href="ejemploPez.html">Peces</a>
+            <a href="ejemploAnfibio.html">Anfibios</a>
+          </div>
+        </div>
+      
+        <div class="links">
+          Colabora
+          <div class="submenu">
+            <a href="pruebaImagen.html">Donaciones</a>
+            <a href="pruebaImagen.html">Voluntariado</a>
+            <a href="pruebaImagen.html">Apadrina</a>
+          </div>
+        </div>
+      
+        <div class="links">
+          Tienda
+          <div class="submenu">
+            <a href="tiendaCamisetas.html">Camisetas</a>
+            <a href="tiendaTazas.html">Tazas</a>
+            <a href="tiendaAccesorios.html">Accesorios</a>
+          </div>
+        </div>
+      
+        <div class="links">
+          Poner en adopción
+          <div class="submenu">
+            <a href="form2.html">Formulario</a>
+            <a href="requisitos.html">Requisitos</a>
+            <a href="ponerEnAdopcionFolder/consejos.html">Consejos</a>
+          </div>
+        </div>
+      
+        <div class="links">
+          Quiénes somos
+          <div class="submenu">
+            <a href="nuestraHistoria.html">Nuestra Historia</a>
+            <a href="elEquipo.html">El Equipo</a>
+            <a href="misionVision.html">Misión y Visión</a>
+          </div>
+        </div>
     </header>
-    <main>
-        <section id="contenedor">
-            <div>
-                <img class="fotoanimal" src="img/gato.jpg" alt="Foto gato">
-                <h2 class="nombre">Milo</h2>
-                <p class="descripcion">Adora dormir en lugares soleados.</p>
-                <button class="adoptar">adoptar</button>
-                <button class="favorito"><img src="img/corazonvacio.png" alt="favorito"></button>
-            </div>
-            <div>
-                <img class="fotoanimal" src="img/gato2.jpg" alt="Foto gato">
-                <h2 class="nombre">Nina</h2>
-                <p class="descripcion">Juguetona incansable con una mirada tierna.</p>
-                <button class="adoptar">adoptar</button>
-                <button class="favorito"><img src="img/corazonvacio.png" alt="favorito"></button>
-            </div>
-            <div>
-                <img class="fotoanimal" src="img/gato3.webp" alt="Foto gato">
-                <h2 class="nombre">Simón</h2>
-                <p class="descripcion">Se esconde en las cajas más pequeñas.</p>
-                <button class="adoptar">adoptar</button>
-                <button class="favorito"><img src="img/corazonvacio.png" alt="favorito"></button>
-            </div>
-            <div>
-                <img class="fotoanimal" src="img/gato4.webp" alt="Foto gato">
-                <h2 class="nombre">Kiara</h2>
-                <p class="descripcion">Ama que le acaricien detrás de las orejas.</p>
-                <button class="adoptar">adoptar</button>
-                <button class="favorito"><img src="img/corazonvacio.png" alt="favorito"></button>
-            </div>
-            <div>
-                <img class="fotoanimal" src="img/gato5.webp" alt="Foto gato">
-                <h2 class="nombre">Romeo</h2>
-                <p class="descripcion">Un amor de cuatro patas con mucha energía.</p>
-                <button class="adoptar">adoptar</button>
-                <button class="favorito"><img src="img/corazonvacio.png" alt="favorito"></button>
-            </div>
-            <div>
-                <img class="fotoanimal" src="img/gato6.jpg" alt="Foto gato">
-                <h2 class="nombre">Tina</h2>
-                <p class="descripcion">Siempre quiere estar en tu regazo.</p>
-                <button class="adoptar">adoptar</button>
-                <button class="favorito"><img src="img/corazonvacio.png" alt="favorito"></button>
-            </div>
-            <div>
-                <img class="fotoanimal" src="img/gato7.webp" alt="Foto gato">
-                <h2 class="nombre">Lorenzo</h2>
-                <p class="descripcion">Le encanta observar todo desde las alturas.</p>
-                <button class="adoptar">adoptar</button>
-                <button class="favorito"><img src="img/corazonvacio.png" alt="favorito"></button>
-            </div>
-        </section>
 
-        <aside id="menu">
-            <ul>
-                <li><a href="ejemploPerro.html">Perros</a></li>
-                <li><a href="ejemploAnimal.html">Peces</a></li>
-                <li><a href="ejemploAnimal.html">Roedores</a></li>
-                <li><a href="ejemploAnimal.html">Aves</a></li>
-                <li><a href="ejemploAnimal.html">Reptiles</a></li>
-                <li><a href="ejemploAnimal.html">Equinos</a></li>
-                <li><a href="ejemploAnimal.html">Exótico</a></li>
-                <li><a href="ejemploAnimal.html">Bovino</a></li>
-                <li><a href="ejemploAnimal.html">Insectos</a></li>
-            </ul>
-        </aside>
-    </main>
+    <main>
+      <section id="contenedor">
+          <div class="cajaentera">
+              <div class="visible">
+                  <img class="fotoanimal" src="../imgs/fotoGatos/gato.jpg" alt="Foto gato">
+                  <h2 class="nombre">Milo</h2>
+                  <p class="descripcion">Le encanta dormir en lugares soleados.</p>
+                  <button class="adoptar" onclick="pasarDatos(this)"
+                      data-nombre="Milo"
+                      data-raza="Siamés"
+                      data-tamano="Mediano"
+                      data-edad="3 años">adoptar</button>
+                  <button class="favorito"><img src="../imgs/corazonvacio.png" alt="favorito"></button>
+              </div>
+              <div class="oculto">
+                  <p>Edad: 3 años</p>
+                  <p>Raza: Siamés</p>
+                  <p>Tamaño: Mediano</p> 
+                  <p>Descripción: Muy cariñoso y tranquilo, ideal para quienes buscan compañía en casa.</p>
+              </div>
+          </div>
+  
+          <div class="cajaentera">
+              <div class="visible">
+                  <img class="fotoanimal" src="../imgs/fotoGatos/gato2.jpg" alt="Foto gato">
+                  <h2 class="nombre">Nina</h2>
+                  <p class="descripcion">Juega con cualquier cosa que se mueva.</p>
+                  <button class="adoptar" onclick="pasarDatos(this)"
+                      data-nombre="Nina"
+                      data-raza="Persa"
+                      data-tamano="Grande"
+                      data-edad="4 años">adoptar</button>
+                  <button class="favorito"><img src="../imgs/corazonvacio.png" alt="favorito"></button>
+              </div>
+              <div class="oculto">
+                  <p>Edad: 4 años</p>
+                  <p>Raza: Persa</p>
+                  <p>Tamaño: Grande</p> 
+                  <p>Descripción: Juguetona y activa, le encanta explorar nuevos lugares.</p>
+              </div>
+          </div>
+  
+          <div class="cajaentera">
+              <div class="visible">
+                  <img class="fotoanimal" src="../imgs/fotoGatos/gato3.webp" alt="Foto gato">
+                  <h2 class="nombre">Tommy</h2>
+                  <p class="descripcion">Le gusta mirar por la ventana durante horas.</p>
+                  <button class="adoptar" onclick="pasarDatos(this)"
+                      data-nombre="Tommy"
+                      data-raza="Maine Coon"
+                      data-tamano="Grande"
+                      data-edad="5 años">adoptar</button>
+                  <button class="favorito"><img src="../imgs/corazonvacio.png" alt="favorito"></button>
+              </div>
+              <div class="oculto">
+                  <p>Edad: 5 años</p>
+                  <p>Raza: Maine Coon</p>
+                  <p>Tamaño: Grande</p> 
+                  <p>Descripción: Muy relajado y amigable, disfruta de largos ratos de tranquilidad.</p>
+              </div>
+          </div>
+  
+          <div class="cajaentera">
+              <div class="visible">
+                  <img class="fotoanimal" src="../imgs/fotoGatos/gato4.webp" alt="Foto gato">
+                  <h2 class="nombre">Luna</h2>
+                  <p class="descripcion">Siempre se acomoda en el lugar más cómodo de la casa.</p>
+                  <button class="adoptar" onclick="pasarDatos(this)"
+                      data-nombre="Luna"
+                      data-raza="Bengala"
+                      data-tamano="Mediano"
+                      data-edad="2 años">adoptar</button>
+                  <button class="favorito"><img src="../imgs/corazonvacio.png" alt="favorito"></button>
+              </div>
+              <div class="oculto">
+                  <p>Edad: 2 años</p>
+                  <p>Raza: Bengala</p>
+                  <p>Tamaño: Mediano</p> 
+                  <p>Descripción: Muy curiosa y activa, le encanta escalar y explorar.</p>
+              </div>
+          </div>
+  
+          <div class="cajaentera">
+              <div class="visible">
+                  <img class="fotoanimal" src="../imgs/fotoGatos/gato5.webp" alt="Foto gato">
+                  <h2 class="nombre">Kira</h2>
+                  <p class="descripcion">Siempre te sigue por la casa, como si fuera tu sombra.</p>
+                  <button class="adoptar" onclick="pasarDatos(this)"
+                      data-nombre="Kira"
+                      data-raza="Ragdoll"
+                      data-tamano="Grande"
+                      data-edad="6 años">adoptar</button>
+                  <button class="favorito"><img src="../imgs/corazonvacio.png" alt="favorito"></button>
+              </div>
+              <div class="oculto">
+                  <p>Edad: 6 años</p>
+                  <p>Raza: Ragdoll</p>
+                  <p>Tamaño: Grande</p> 
+                  <p>Descripción: Muy tranquila y cariñosa, ideal para quienes buscan una compañera calmada.</p>
+              </div>
+          </div>
+  
+          <div class="cajaentera">
+              <div class="visible">
+                  <img class="fotoanimal" src="../imgs/fotoGatos/gato6.jpg" alt="Foto gato">
+                  <h2 class="nombre">Leo</h2>
+                  <p class="descripcion">Siempre está buscando algo para cazar.</p>
+                  <button class="adoptar" onclick="pasarDatos(this)"
+                      data-nombre="Leo"
+                      data-raza="Sphynx"
+                      data-tamano="Mediano"
+                      data-edad="1 año">adoptar</button>
+                  <button class="favorito"><img src="../imgs/corazonvacio.png" alt="favorito"></button>
+              </div>
+              <div class="oculto">
+                  <p>Edad: 1 año</p>
+                  <p>Raza: Sphynx</p>
+                  <p>Tamaño: Mediano</p> 
+                  <p>Descripción: Muy juguetón y curioso, siempre activo y lleno de energía.</p>
+              </div>
+          </div>
+  
+          <div class="cajaentera">
+              <div class="visible">
+                  <img class="fotoanimal" src="../imgs/fotoGatos/gato7.webp" alt="Foto gato">
+                  <h2 class="nombre">Lorenzo</h2>
+                  <p class="descripcion">Le encanta descansar en las alturas.</p>
+                  <button class="adoptar" onclick="pasarDatos(this)"
+                      data-nombre="Tina"
+                      data-raza="Abyssinian"
+                      data-tamano="Pequeño"
+                      data-edad="2 años">adoptar</button>
+                  <button class="favorito"><img src="../imgs/corazonvacio.png" alt="favorito"></button>
+              </div>
+              <div class="oculto">
+                  <p>Edad: 2 años</p>
+                  <p>Raza: Abyssinian</p>
+                  <p>Tamaño: Pequeño</p> 
+                  <p>Descripción: Activo y cariñoso, le encanta saltar y explorar cada rincón de la casa.</p>
+              </div>
+          </div>    
+      </section>
+  
+      <aside id="menu">
+          <ul id="menuLateral">
+            <li><a href="ejemploPerro.html">Perros</a></li>
+              <li><a href="ejemploGato.html">Gatos</a></li>
+              <li><a href="ejemploPez.html">Peces</a></li>
+              <li><a href="ejemploRoedor.html">Roedores</a></li>
+              <li><a href="ejemploAve.html">Aves</a></li>
+              <li><a href="ejemploReptil.html">Reptiles</a></li>
+              <li><a href="ejemploAnfibio.html">Anfibios</a></li>
+              <li><a href="ejemploExotico.html">Exótico</a></li>
+          </ul>
+      </aside>
+  </main>
+  
 
     <footer>
 
@@ -167,7 +310,7 @@
             <a href="">Poner en adopción</a>
         </div>
       </div>
-      <hr style>
+      <hr>
       <div id="FooterFooter">
 
         <p>Copyright © 2025 Homeless Pets. Todos los derechos reservados. Proyecto desarrollado por Keep Calm para el Instituto Ilerna Sevilla.</p>
@@ -185,6 +328,8 @@
       </div>
 
     </footer>
+
+    <script src="../scripts/scriptejemploAnimales.js"></script>
 </body>
 
 </html>
