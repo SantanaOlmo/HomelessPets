@@ -20,7 +20,18 @@
 
 ## [Backend (firebase)](https://console.firebase.google.com/u/0/project/homelesspets-70a83/overview?hl=es)
 
+### Lista de animales
+<a href="/views/ejemploPerro.html">Enlace</a>
 
+Los usuarios pueden explorar cada categoría para conocer los detalles de las mascotas disponibles para adopción. Cada ficha de animal incluye su nombre, una foto, su descripción, edad, raza y tamaño. Los usuarios pueden interactuar con cada mascota mediante dos botones: uno para adoptarla y otro para marcarla como favorita.
+
+La estructura HTML está organizada con un diseño de tarjetas para cada animal, distribuidas en secciones dentro de un contenedor principal. También hay un menú lateral de navegación que permite a los usuarios acceder rápidamente a las diferentes categorías de animales.
+
+El diseño de la página está basado en un esquema de colores personalizados definidos con variables CSS, lo que permite una apariencia uniforme y agradable. El uso de grid en CSS organiza los elementos de manera flexible.
+
+Se han implementado efectos visuales como el "latido" en los iconos de favoritos, lo que hace que la experiencia sea más dinámica y atractiva para los usuarios. También se incluyen efectos de hover en las tarjetas de los animales, resaltando la información adicional al pasar el ratón por encima.
+
+En resumen, este proyecto ofrece una plataforma interactiva para la adopción de diversas especies de animales, con un diseño atractivo y fácil de usar.
 
 #### Configuracion del repositorio con Firebase(firebase init hosting:github)
 
