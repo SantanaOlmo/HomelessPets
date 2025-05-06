@@ -21,11 +21,11 @@
     <div class="form-row">
         <div class="form-group">
             <label for="nombre">Nombre <span class="required">*</span></label>
-            <input type="text" id="nombre" name="nombre" required />
+            <input type="text" id="nombre" name="nombre" maxlength="50" required />
         </div>
         <div class="form-group">
             <label for="apellidos">Apellidos <span class="required">*</span></label>
-            <input type="text" id="apellidos" name="apellidos" required />
+            <input type="text" id="apellidos" name="apellidos" maxlength="50" required />
         </div>
     </div>
 
@@ -36,18 +36,18 @@
         </div>
         <div class="form-group">
             <label for="direccion">Dirección <span class="required">*</span></label>
-            <input type="text" id="direccion" name="direccion" required />
+            <input type="text" id="direccion" name="direccion" maxlength="50" required />
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group">
             <label for="telefonos">Teléfonos <span class="required">*</span></label>
-            <input type="tel" id="telefonos" name="telefonos" required />
+            <input type="tel" id="telefonos" name="telefonos" maxlength="9" required />
         </div>
         <div class="form-group">
             <label for="email">eMail <span class="required">*</span></label>
-            <input type="email" id="email" name="email" required />
+            <input type="email" id="email" name="email" maxlength="50" required />
         </div>
     </div>
 
@@ -56,11 +56,11 @@
     <div class="form-row">
         <div class="form-group">
             <label for="perro-nombre">Nombre del perro</label>
-            <input type="text" id="perro-nombre" name="perro-nombre" />
+            <input type="text" id="perro-nombre" name="perro-nombre" maxlength="50" />
         </div>
         <div class="form-group">
             <label for="perro-raza">Raza</label>
-            <input type="text" id="perro-raza" name="perro-raza" />
+            <input type="text" id="perro-raza" name="perro-raza" maxlength="50" />
         </div>
     </div>
 
@@ -75,7 +75,7 @@
         </div>
         <div class="form-group">
             <label for="perro-edad">Edad</label>
-            <input type="number" id="perro-edad" name="perro-edad" min="0" />
+            <input type="number" id="perro-edad" name="perro-edad" maxlength="2" min="0" />
         </div>
     </div>
 
@@ -91,34 +91,35 @@
     <div class="form-row">
         <div class="form-group" style="flex: 1; min-width: 100%;">
             <label for="p1">1. ¿Por qué quieres poner en adopción a tu perro? <span class="required">*</span></label>
-            <textarea id="p1" name="p1" required></textarea>
+            <textarea id="p1" name="p1" maxlength="200" required></textarea>
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group" style="flex: 1; min-width: 100%;">
             <label for="p2">2. ¿El perro ha tenido algún problema de salud importante? <span class="required">*</span></label>
-            <textarea id="p2" name="p2" required></textarea>
+            <textarea id="p2" name="p2" maxlength="200" required></textarea>
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group" style="flex: 1; min-width: 100%;">
             <label for="p3">3. ¿El perro está esterilizado? <span class="required">*</span></label>
-            <textarea id="p3" name="p3" required></textarea>
+            <textarea id="p3" name="p3" maxlength="200" required></textarea>
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group" style="flex: 1; min-width: 100%;">
             <label for="p4">4. ¿Tiene el perro algún comportamiento específico que deba tener en cuenta el futuro adoptante? <span class="required">*</span></label>
-            <textarea id="p4" name="p4" required></textarea>
+            <textarea id="p4" name="p4" maxlength="200" required></textarea>
         </div>
     </div>
     <div id="estado" style="text-align:center; margin: 20px; color: green;"></div>
 
     <div class="form-row" style="justify-content: center; margin-top: 20px;">
         <button type="submit" class="submit-button">Enviar formulario</button>
+        <p id="mensaje" style="margin-top: 10px;"></p> 
     </div>
 </form>
 
