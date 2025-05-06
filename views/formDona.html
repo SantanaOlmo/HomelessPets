@@ -1,35 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Homeless Pets</title>
-  <link rel="stylesheet" href="../styles/style_aboutUs.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario de adopción</title>
+<link rel="stylesheet" href="../styles/style_Donar.css" />
 </head>
 <body>
-  <header class="nombre-empresa">Homeless Pets</header>
-  <div class="tarjeta">
-    <p>about us</p>
-    <p class="presentacion">
-      <strong>Homeless Pets</strong> nace con un único propósito: ofrecer una segunda oportunidad a los animales que, por diversas circunstancias, se han quedado sin hogar. Sabemos que en ocasiones la vida presenta situaciones complejas, y que algunas personas no pueden continuar cuidando a sus mascotas como desearían. También sabemos que muchos animales terminan en la calle sin comprensión de por qué sucedió esto.
-      <br><br>
-      Por eso, nuestra misión es proporcionar apoyo a estos animales y darles la oportunidad de ser adoptados por personas dispuestas a ofrecerles un hogar lleno de amor. En <strong>Homeless Pets</strong>, nos encargamos de rescatar, cuidar y buscar familias que estén preparadas para acoger a estos animales y brindarles la vida que merecen.
-      <br><br>
-      Además, ofrecemos un apoyo cercano a aquellos que, lamentablemente, deben dejar ir a sus mascotas. Sabemos lo difícil que es tomar esa decisión, y nos aseguramos de que estos animales encuentren un hogar adecuado, donde serán cuidados y respetados.
-      <br><br>
-      Cada adopción es una nueva oportunidad para un ser vivo y un paso más hacia una sociedad que valora la vida animal. Si deseas ser parte de esta causa, puedes adoptar, donar, ser voluntario o apoyar de otras formas nuestras acciones.
-      <br><br>
-      Agradecemos tu confianza y apoyo, y por creer que todos los animales merecen una nueva oportunidad.
-      <br><br>
-      Atentamente, <strong>El equipo de Homeless Pets</strong>
-  </p>
+
+<header>
+    <div class="presentation">
+        <h1>Formulario de Donaciones</h1>
+        <p>El presente documento es un cuestionario que debes enviarnos para certificar la donación para evitar una posible estafa. Por ello, te rogamos máxima sinceridad y que nos cuentes todos los detalles posibles sobre esta. Todos los datos aquí contenidos serán de carácter totalmente privado y tan sólo tendrán acceso a ellos las personas encargadas de gestionar la adopción.</p>
+    </div>
+</header>
+  <form class="form-container"> 
+    <h3>Datos de la Persona donante</h3>
+    <hr />
+    <div class="form-row">
+      <div class="form-group">
+        <label for="nombre">Nombre <span class="required">*</span></label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+      <div class="form-group">
+        <label for="apellidos">Apellidos <span class="required">*</span></label>
+        <input type="text" id="apellidos" name="apellidos" required />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="fecha">Fecha de nacimiento <span class="required">*</span></label>
+        <input type="date" id="fecha" name="fecha" required />
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección <span class="required">*</span></label>
+        <input type="text" id="direccion" name="direccion" required />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="poblacion">Población</label>
+        <input type="text" id="poblacion" name="poblacion" />
+      </div>
+      <div class="form-group">
+        <label for="provincia">Provincia <span class="required">*</span></label>
+        <input type="text" id="provincia" name="provincia" required />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="telefonos">Teléfonos <span class="required">*</span></label>
+        <input type="tel" id="telefonos" name="telefonos" required />
+      </div>
+      <div class="form-group">
+        <label for="email">eMail <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required />
+      </div>
+    </div>
+
+    <h3>Cantidad a aportar</h3>
+    <hr />
+    <div class="form-row">
+      <div class="form-group">
+        <label for="mascota-nombre">Cantidad (€)</label>
+        <input type="text" id="mascota-nombre" name="mascota-nombre" readonly/>
+      </div>
+    </div>      
+    
+
+
+    <h3>Cuestionario sobre la donación</h3>
+    <hr />
+    <div class="form-row">
+        <div class="form-group" style="flex: 1; min-width: 100%;">
+          <label for="p1">1. ¿Por qué has decidido donar en nuestro proyecto? <span class="required">*</span></label>
+          <textarea id="p1" name="p1" required></textarea>
+        </div>
+      </div>
   
-  </div>
-  <button class="boton-donar">
-    <a href="formDona.html">
-      DONA
-    </a>
-  </button>
+      <div class="form-row">
+        <div class="form-group" style="flex: 1; min-width: 100%;">
+          <label for="p2">2. ¿Que deberiamos mejorar? <span class="required">*</span></label>
+          <textarea id="p2" name="p2" required></textarea>
+        </div>
+      </div>
+  
+      
+ <div class="form-row" style="justify-content: center; margin-top: 20px;">
+  <button type="submit" class="submit-button" >Enviar formulario</button>
+</div>
+  </form>
   <footer>
 
     <div id="elementosFooter">
@@ -124,16 +187,17 @@
     
     <div id="enlacesFinales">
       <a href="">Política de privacidad</a>
-      <a>|</a>
-      <a href="">Condiciones de uso</a>      
-      <a>|</a>
+      <p> | </p>
+      <a href="">Condiciones de uso</a>
+      <p> | </p>
       <a href="">Avisos legales</a>
-      <a>|</a>
+      <p> | </p>
       <a href="">Mapa del sitio.</a>
     </div>  
 
   </div>
 
 </footer>
+<script src="../scripts/form1.js"></script>
 </body>
 </html>

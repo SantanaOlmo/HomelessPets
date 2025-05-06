@@ -50,7 +50,17 @@ header img {
     font-size: 1em;
     font-weight: 900;
     transition: all .2s ease-in-out;
+
+    a{
+        text-decoration: none;
+        color:  #ffffff;
+        
+    }
+    a:hover{
+        color:#566813;
+    }
 }
+
 
 .links:hover {
     font-size: 1.1em;
