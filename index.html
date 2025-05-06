@@ -59,6 +59,22 @@
         <a href="views/misionVision.html">Misión y Visión</a>
       </div>
     </div>
+    <div class="login-container">
+      <form class="login-form">
+        <input type="text" placeholder="Usuario" name="username">
+        <input type="password" placeholder="Contraseña" name="password">
+        <button type="submit">Iniciar sesión</button>
+        <p id="login-error" style="color: red; font-size: 0.9em; margin-top: 51px; display: none;"></p>
+        <div class="login-links">
+          <a href="#" id="forgotPassword">¿Olvidaste tu contraseña?</a> |
+          <a href="views/registro.html">Registrarse</a>
+        </div>
+      </form>
+      <div id="bienvenida" style="display: none; align-items: center; gap: 10px;">
+        <span id="mensajeBienvenida" style="font-weight: bold;"></span>
+        <img src="imgs/logoUsuario.png" alt="Usuario" style="width: 40px; height: 40px; border-radius: 50%;">
+      </div>
+    </div>
   </header>
   
 

@@ -1,11 +1,9 @@
-:root{
-  --color-lima:#bad326;
-  --color-pastel:#d6e37b;
-  --color-oliva:#566813;
-  --color-pistacho:#90ac5c;
-  --color-arena:#b8a97d;
-}
 
+.color1 { background-color: #bad326; } /* Lima Vibrante */
+.color2 { background-color: #d6e37b; } /* Amarillo Verdoso Pastel */
+.color3 { background-color: #566813; } /* Verde Oliva Oscuro */
+.color4 { background-color: #90ac5c; } /* Verde Pistacho */
+.color5 { background-color: #b8a97d; } /* Arena Suave */
 
 
 *{
@@ -85,6 +83,8 @@ body {
     resize: vertical;
     font-size: 14px;
     box-sizing: border-box;
+    min-height: 50px;        /* Altura mínima */
+    max-height: 150px;       /* Altura máxima permitida */
   }
 
   .submit-button {
@@ -100,6 +100,13 @@ body {
   .submit-button:hover {
     background-color:   #bad326;
   }
+  
+  #mensaje {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+}
 
   /*-F O O T E R-----------------------------------------------*/
 footer{

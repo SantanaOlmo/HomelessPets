@@ -1,11 +1,9 @@
-:root{
-    --color-lima:#bad326;
-    --color-pastel:#d6e37b;
-    --color-oliva:#566813;
-    --color-pistacho:#90ac5c;
-    --color-arena:#b8a97d;
-}
 
+.color1 { background-color: #bad326; } /* Lima Vibrante */
+.color2 { background-color: #d6e37b; } /* Amarillo Verdoso Pastel */
+.color3 { background-color: #566813; } /* Verde Oliva Oscuro */
+.color4 { background-color: #90ac5c; } /* Verde Pistacho */
+.color5 { background-color: #b8a97d; } /* Arena Suave */
 
 
 /* Estructura general */
@@ -22,92 +20,25 @@ body {
     background-size: 30vw;
 }
 
-   /*--H E A D E R-------------------------------*/
 
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(#90ac5c8a, rgba(255, 255, 255, 0));
-    z-index: 20;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3em;
-    padding: 0 2rem 0 2rem;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: height 0.3s ease; /* Transición suave al cambiar altura */
-    overflow:visible; /* Para que los submenús no sobresalgan */
+#cabecera {
+    margin-bottom: 3vw;
+    padding: 1em;
+    background-color: #90ac5c;
 }
 
-header #imagen{
-    position: fixed;
-    left: 2em;
-    cursor: pointer;
-    img{
-        width: 4em;
-    }
+#cabecera h1 {
+    color: #ffffff;
+    font-size: 4em;
+    margin: 0em 0.5em;
+    
 }
-
-.links {
-    position: relative;
-    text-shadow: 1px 1px 10px var(--color-arena);
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    font-size: 1em;
-    font-weight: 900;
-    transition: all .2s ease-in-out;
-}
-
-.links:hover {
-    font-size: 1.1em;
-    transition: all .2s ease-in-out;
-    color:var(--color-oliva);
-    cursor:pointer;
-}
-
-/* Submenú oculto */
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(90, 110, 50, 0.9);
-    border-radius: 8px;
-    padding: 10px;
-    min-width: 150px;
-    text-align: left;
-}
-
-/* Mostramos el submenú solo con hover */
-.links:hover .submenu {
-    display: block;
-}
-
-.submenu a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 5px 0;
-    font-size: 0.9vw;
-}
-
-.submenu a:hover {
-    color: #c7db6c;
-}
-/*-----------------------------------------------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------------------------------------------*/
 
 main {
-    margin-top: 80px;
     display: grid;
     grid-template-columns: 3.5fr 1fr;
     gap: 1em;
-    padding: 5em 1em 7em;
+    padding: 1em;
 }
 
 #contenedor {
@@ -146,7 +77,6 @@ main {
 }
 
 #contenedor .visible {
-    padding-top: 1em;
     margin: 1em 0em;
     overflow: hidden;
     display: grid;
@@ -158,7 +88,7 @@ main {
 }
 
 .adoptar {
-    background-color: var(--color-pistacho);
+    background-color: #90ac5c;
     color: white;
     border: none;
     padding: 0.7em 1.5em;
@@ -273,7 +203,7 @@ main {
 
 #menu {
     position: sticky;
-    top: 5em;
+    top: 1em;
     align-self: start;
     border-radius: 25px;
     padding: 1em;
@@ -311,7 +241,7 @@ main {
     background-color: white;
     border: #e6dbb9 0.5em solid;
     border-radius: 25px;
-    height: 31em;
+    height: 28em;
 }
 
 
