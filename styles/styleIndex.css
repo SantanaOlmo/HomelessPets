@@ -10,7 +10,6 @@
 
 
 *{
-
     margin: 0;
     font-family: sans-serif;
     
@@ -127,6 +126,7 @@ header {
 }
 
 /*LOGIN*/
+  
   .login-form input {
     margin: 2px 0;
     padding: 4px 8px;
@@ -161,8 +161,6 @@ header {
   .login-links a:hover {
     text-decoration: underline;
   }
-
-
 /*----M A I N----------------------*/
 main {
     margin: 0;
@@ -220,6 +218,7 @@ main {
         transform: translateX(-50%);
         }
     }
+
 
 
 /*-------A S I D E   D E R E C H A--------------------------------------------------*/

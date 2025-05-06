@@ -3,181 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formulario para poner en adopción un perro</title>
+  <title>Poner en adopción</title>
   <link rel="stylesheet" href="../styles/StyleForm.css" />
 </head>
+
 <body>
 
-    <header>
-        <a class="flip-container" href="../index.html">
-            <div class="flipper" >
-              <img class="front" src="../imgs/logo1.png" alt="Logo Frente">
-              <img class="back" src="../imgs/logo2.png" alt="Logo Reverso">
-            </div>
-        </a>
-        
-      
-        <div class="links">
-          Animales
-          <div class="submenu">
-            <a href="ejemploPerro.html">Perros</a>
-            <a href="ejemploGato.html">Gatos</a>
-            <a href="ejemploRoedor.html">Roedores</a>
-            <a href="ejemploAve.html">Aves</a>
-            <a href="ejemploReptil.html">Reptiles</a>
-            <a href="ejemploPez.html">Peces</a>
-            <a href="ejemploAnfibio.html">Anfibios</a>
-          </div>
+<header>
+    <a class="flip-container" href="../index.html">
+        <div class="flipper" >
+            <img class="front" src="../imgs/logo1.png" alt="Logo Frente">
+            <img class="back" src="../imgs/logo2.png" alt="Logo Reverso">
         </div>
-      
-        <div class="links">
-          Colabora
-          <div class="submenu">
-            <a href="pruebaImagen.html">Donaciones</a>
-            <a href="pruebaImagen.html">Voluntariado</a>
-            <a href="pruebaImagen.html">Apadrina</a>
-          </div>
+    </a>
+    
+    
+    <div class="links">
+        Animales
+        <div class="submenu">
+        <a href="ejemploPerro.html">Perros</a>
+        <a href="ejemploGato.html">Gatos</a>
+        <a href="ejemploRoedor.html">Roedores</a>
+        <a href="ejemploAve.html">Aves</a>
+        <a href="ejemploReptil.html">Reptiles</a>
+        <a href="ejemploPez.html">Peces</a>
+        <a href="ejemploAnfibio.html">Anfibios</a>
         </div>
-      
-        <div class="links">
-          Tienda
-          <div class="submenu">
-            <a href="tiendaCamisetas.html">Camisetas</a>
-            <a href="tiendaTazas.html">Tazas</a>
-            <a href="tiendaAccesorios.html">Accesorios</a>
-          </div>
+    </div>
+    
+    <div class="links">
+        Colabora
+        <div class="submenu">
+        <a href="pruebaImagen.html">Donaciones</a>
+        <a href="pruebaImagen.html">Voluntariado</a>
+        <a href="pruebaImagen.html">Apadrina</a>
         </div>
-      
-        <div class="links">
-          Poner en adopción
-          <div class="submenu">
-            <a href="form2.html">Formulario</a>
-            <a href="requisitos.html">Requisitos</a>
-            <a href="ponerEnAdopcionFolder/consejos.html">Consejos</a>
-          </div>
+    </div>
+    
+    <div class="links">
+        Tienda
+        <div class="submenu">
+        <a href="tiendaCamisetas.html">Camisetas</a>
+        <a href="tiendaTazas.html">Tazas</a>
+        <a href="tiendaAccesorios.html">Accesorios</a>
         </div>
-      
-        <div class="links">
-          Quiénes somos
-          <div class="submenu">
-            <a href="nuestraHistoria.html">Nuestra Historia</a>
-            <a href="elEquipo.html">El Equipo</a>
-            <a href="misionVision.html">Misión y Visión</a>
-          </div>
+    </div>
+    
+    <div class="links">
+        Poner en adopción
+        <div class="submenu">
+        <a href="form2.html">Formulario</a>
+        <a href="requisitos.html">Requisitos</a>
+        <a href="ponerEnAdopcionFolder/consejos.html">Consejos</a>
         </div>
-    </header>
+    </div>
+    
+    <div class="links">
+        Quiénes somos
+        <div class="submenu">
+        <a href="nuestraHistoria.html">Nuestra Historia</a>
+        <a href="elEquipo.html">El Equipo</a>
+        <a href="misionVision.html">Misión y Visión</a>
+        </div>
+    </div>
+</header>
 
 <main>
     <form id="formulario" class="form-container" enctype="multipart/form-data">
-        <div class="presentation">
-            <h1>Formulario para poner en adopción</h1>
-        </div>
-        <h3>Datos del propietario</h3>
-        <hr />
-        <div class="form-row">
-            <div class="form-group">
-                <label for="nombre">Nombre <span class="required">*</span></label>
-                <input type="text" id="nombre" name="nombre" required />
-            </div>
-            <div class="form-group">
-                <label for="apellidos">Apellidos <span class="required">*</span></label>
-                <input type="text" id="apellidos" name="apellidos" required />
-            </div>
-        </div>
 
-        <div class="form-row">
-            <div class="form-group">
-                <label for="fecha">Fecha de nacimiento <span class="required">*</span></label>
-                <input type="date" id="fecha" name="fecha" required />
-            </div>
-            <div class="form-group">
-                <label for="direccion">Dirección <span class="required">*</span></label>
-                <input type="text" id="direccion" name="direccion" required />
-            </div>
-        </div>
+    <h3>Datos del propietario</h3>
 
-        <div class="form-row">
-            <div class="form-group">
-                <label for="telefonos">Teléfonos <span class="required">*</span></label>
-                <input type="tel" id="telefonos" name="telefonos" required />
-            </div>
-            <div class="form-group">
-                <label for="email">eMail <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required />
-            </div>
-        </div>
+    <div class="form-row">
 
-        <h3>Datos del Perro</h3>
-        <hr />
-        <div class="form-row">
-            <div class="form-group">
-                <label for="perro-nombre">Nombre del perro</label>
-                <input type="text" id="perro-nombre" name="perro-nombre" />
-            </div>
-            <div class="form-group">
-                <label for="perro-raza">Raza</label>
-                <input type="text" id="perro-raza" name="perro-raza" />
-            </div>
-        </div>
+    <div class="form-group">
+        <label for="nombre">Nombre <span class="required">*</span></label>
+        <input type="text" id="nombre" name="nombre" maxlength="50" required />
+    </div>
+    <div class="form-group">
+        <label for="apellidos">Apellidos <span class="required">*</span></label>
+        <input type="text" id="apellidos" name="apellidos" maxlength="50" required />
+    </div>
 
-        <div class="form-row">
-            <div class="form-group">
-                <label for="perro-tamano">Tamaño</label>
-                <select id="perro-tamano" name="perro-tamano">
-                    <option value="pequeno">Pequeño</option>
-                    <option value="mediano">Mediano</option>
-                    <option value="grande">Grande</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="perro-edad">Edad</label>
-                <input type="number" id="perro-edad" name="perro-edad" min="0" />
-            </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="fecha">Fecha de nacimiento <span class="required">*</span></label>
+            <input type="date" id="fecha" name="fecha" required />
         </div>
+        <div class="form-group">
+            <label for="direccion">Dirección <span class="required">*</span></label>
+            <input type="text" id="direccion" name="direccion" maxlength="50" required />
+        </div>
+    </div>
 
-        <div class="form-row">
-            <div class="form-group">
-                <label for="imagen">Imagen del perro</label>
-                <input type="file" id="imagen" name="perro-imagen" accept="image/*" />
-            </div>
-        </div>
+    </div>
 
-        <h3>Cuestionario sobre la adopción</h3>
-        <hr />
-        <div class="form-row">
-            <div class="form-group" style="flex: 1; min-width: 100%;">
-                <label for="p1">1. ¿Por qué quieres poner en adopción a tu perro? <span class="required">*</span></label>
-                <textarea id="p1" name="p1" required></textarea>
-            </div>
-        </div>
+    <div class="form-row">
 
-        <div class="form-row">
-            <div class="form-group" style="flex: 1; min-width: 100%;">
-                <label for="p2">2. ¿El perro ha tenido algún problema de salud importante? <span class="required">*</span></label>
-                <textarea id="p2" name="p2" required></textarea>
-            </div>
-        </div>
+    <div class="form-group">
+        <label for="telefonos">Teléfonos <span class="required">*</span></label>
+        <input type="tel" id="telefonos" name="telefonos" maxlength="9" required />
+    </div>
 
-        <div class="form-row">
-            <div class="form-group" style="flex: 1; min-width: 100%;">
-                <label for="p3">3. ¿El perro está esterilizado? <span class="required">*</span></label>
-                <textarea id="p3" name="p3" required></textarea>
-            </div>
-        </div>
+    <div class="form-group">
+        <label for="email">eMail <span class="required">*</span></label>
+        <input type="email" id="email" name="email" maxlength="50" required />
+    </div>
 
-        <div class="form-row">
-            <div class="form-group" style="flex: 1; min-width: 100%;">
-                <label for="p4">4. ¿Tiene el perro algún comportamiento específico que deba tener en cuenta el futuro adoptante? <span class="required">*</span></label>
-                <textarea id="p4" name="p4" required></textarea>
-            </div>
-        </div>
-        <div id="estado" style="text-align:center; margin: 20px; color: green;"></div>
+    </div>
 
-        <div class="form-row" style="justify-content: center; margin-top: 20px;">
-            <button type="submit" class="submit-button">Enviar formulario</button>
-        </div>
+    <h3>Datos del Perro</h3>
+
+    <div class="form-row">
+    <div class="form-group">
+        <label for="perro-nombre">Nombre del perro</label>
+        <input type="text" id="perro-nombre" name="perro-nombre" maxlength="50" />
+    </div>
+    <div class="form-group">
+        <label for="perro-raza">Raza</label>
+        <input type="text" id="perro-raza" name="perro-raza" maxlength="50" />
+    </div>
+    </div>
+
+    <div class="form-row">
+    <div class="form-group">
+        <label for="perro-tamano">Tamaño</label>
+        <select id="perro-tamano" name="perro-tamano">
+            <option value="pequeno">Pequeño</option>
+            <option value="mediano">Mediano</option>
+            <option value="grande">Grande</option>
+        </select>
+    </div>
+    </div>
+
+    <div class="form-group">
+    <label for="perro-edad">Edad</label>
+    <input type="number" id="perro-edad" name="perro-edad" maxlength="2" min="0" />
+    </div>
+
+    <div class="form-row">
+    <div class="form-group">
+        <label for="imagen">Imagen del perro</label>
+        <input type="file" id="imagen" name="perro-imagen" accept="image/*" />
+    </div>
+    </div>
+
+    <h3>Cuestionario sobre la adopción</h3>
+
+    <div class="form-row">
+    <div class="form-group" style="flex: 1; min-width: 100%;">
+        <label for="p1">1. ¿Por qué quieres poner en adopción a tu perro? <span class="required">*</span></label>
+        <textarea id="p1" name="p1" maxlength="200" required></textarea>
+    </div>
+    </div>
+
+    <div class="form-row">
+    <div class="form-group" style="flex: 1; min-width: 100%;">
+        <label for="p2">2. ¿El perro ha tenido algún problema de salud importante? <span class="required">*</span></label>
+        <textarea id="p2" name="p2" maxlength="200" required></textarea>
+    </div>
+    </div>
+
+    <div class="form-row">
+    <div class="form-group" style="flex: 1; min-width: 100%;">
+        <label for="p3">3. ¿El perro está esterilizado? <span class="required">*</span></label>
+        <textarea id="p3" name="p3" maxlength="200" required></textarea>
+    </div>
+    </div>
+
+    <div class="form-row">
+    <div class="form-group" style="flex: 1; min-width: 100%;">
+        <label for="p4">4. ¿Tiene el perro algún comportamiento específico que deba tener en cuenta el futuro adoptante? <span class="required">*</span></label>
+        <textarea id="p4" name="p4" maxlength="200" required></textarea>
+    </div>
+    </div>
+
+    <div id="estado" style="text-align:center; margin: 20px; color: green;"></div>
+
+    <div class="form-row" style="justify-content: center; margin-top: 20px;">
+        <button type="submit" class="submit-button">Enviar formulario</button>
+    </div>
+    </div>
     </form>
 </main>
+
 <footer>
     <div id="color"></div>
     <div id="elementosFooter">
@@ -284,12 +292,7 @@
 
 </footer>
 
-  <script src="../scripts/form2.js" type="module"></script>
-</body>
-</html>
+<script src="../scripts/form2.js" type="module"></script>
 
-  
-  
-  
 </body>
 </html>

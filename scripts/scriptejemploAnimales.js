@@ -30,5 +30,4 @@ function pasarDatos(boton) {
 
     const url = `form1.html?nombre=${nombre}&raza=${raza}&tamano=${tamano}&edad=${edad}`;
     window.location.href = url;
-    
   }

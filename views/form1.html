@@ -75,11 +75,11 @@
     <div class="form-row">
       <div class="form-group">
         <label for="nombre">Nombre <span class="required">*</span></label>
-        <input type="text" id="nombre" name="nombre" required />
+        <input type="text" id="nombre" name="nombre" maxlength="12" required />
       </div>
       <div class="form-group">
         <label for="apellidos">Apellidos <span class="required">*</span></label>
-        <input type="text" id="apellidos" name="apellidos" required />
+        <input type="text" id="apellidos" name="apellidos" maxlength="50" required />
       </div>
     </div>
 
@@ -90,29 +90,29 @@
       </div>
       <div class="form-group">
         <label for="direccion">Dirección <span class="required">*</span></label>
-        <input type="text" id="direccion" name="direccion" required />
+        <input type="text" id="direccion" name="direccion" maxlength="50" required />
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group">
         <label for="poblacion">Población</label>
-        <input type="text" id="poblacion" name="poblacion" />
+        <input type="text" id="poblacion" name="poblacion" maxlength="20" />
       </div>
       <div class="form-group">
         <label for="provincia">Provincia <span class="required">*</span></label>
-        <input type="text" id="provincia" name="provincia" required />
+        <input type="text" id="provincia" name="provincia" maxlength="20" required />
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group">
         <label for="telefonos">Teléfonos <span class="required">*</span></label>
-        <input type="tel" id="telefonos" name="telefonos" required />
+        <input type="tel" id="telefonos" name="telefonos" maxlength="9" required />
       </div>
       <div class="form-group">
         <label for="email">eMail <span class="required">*</span></label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" maxlength="50" required />
       </div>
     </div>
 
@@ -125,7 +125,7 @@
       </div>
       <div class="form-group">
         <label for="mascota-raza">Raza</label>
-        <input type="text" id="mascota-raza" name="mascota-raza" readonly/>
+        <input type="text" id="mascota-raza" name="mascota-raza" />
       </div>
     </div>
 
@@ -147,61 +147,62 @@
     <div class="form-row">
         <div class="form-group" style="flex: 1; min-width: 100%;">
           <label for="p1">1. ¿Por qué has decidido adoptar un animal y no comprarlo? <span class="required">*</span></label>
-          <textarea id="p1" name="p1" required></textarea>
+          <textarea id="p1" name="p1" maxlength="400" required></textarea>
         </div>
       </div>
   
       <div class="form-row">
         <div class="form-group" style="flex: 1; min-width: 100%;">
           <label for="p2">2. ¿Has tenido animales anteriormente? [...] <span class="required">*</span></label>
-          <textarea id="p2" name="p2" required></textarea>
+          <textarea id="p2" name="p2" maxlength="400" required></textarea>
         </div>
       </div>
   
       <div class="form-row">
         <div class="form-group" style="flex: 1; min-width: 100%;">
           <label for="p3">3. En la actualidad, ¿tienes animales con los que tenga que convivir el adoptado? ¿Cuáles? <span class="required">*</span></label>
-          <textarea id="p3" name="p3" required></textarea>
+          <textarea id="p3" name="p3" maxlength="400"  required></textarea>
         </div>
       </div>
   
       <div class="form-row">
         <div class="form-group" style="flex: 1; min-width: 100%;">
           <label for="p4">4. ¿Qué tipo de alimentación tienes pensado darle? <span class="required">*</span></label>
-          <textarea id="p4" name="p4" required></textarea>
+          <textarea id="p4" name="p4" maxlength="400"  required></textarea>
         </div>
       </div>
   
       <div class="form-row">
         <div class="form-group" style="flex: 1; min-width: 100%;">
           <label for="p5">5. ¿Sabes qué gastos puede ocasionar un animal? Veterinario, alimentación, medicación, etc. <span class="required">*</span></label>
-          <textarea id="p5" name="p5" required></textarea>
+          <textarea id="p5" name="p5" maxlength="400"  required></textarea>
         </div>
       </div>
   
       <div class="form-row">
         <div class="form-group" style="flex: 1; min-width: 100%;">
           <label for="p6">6. La media de vida de un animal es de 15 años. ¿Estás dispuesto a atender sus necesidades durante toda su vida? <span class="required">*</span></label>
-          <textarea id="p6" name="p6" required></textarea>
+          <textarea id="p6" name="p6" maxlength="400"  required></textarea>
         </div>
       </div>
   
       <div class="form-row">
         <div class="form-group" style="flex: 1; min-width: 100%;">
           <label for="p7">7. ¿Qué piensas sobre la esterilización? ¿Esterilizarías a tu mascota? ¿Por qué? <span class="required">*</span></label>
-          <textarea id="p7" name="p7" required></textarea>
+          <textarea id="p7" name="p7" maxlength="400"  required></textarea>
         </div>
       </div>
   
       <div class="form-row">
         <div class="form-group" style="flex: 1; min-width: 100%;">
           <label for="p8">8. ¿Qué lugar de la vivienda estará destinado al animal? [...] <span class="required">*</span></label>
-          <textarea id="p8" name="p8" required></textarea>
+          <textarea id="p8" name="p8" maxlength="400"  required></textarea>
         </div>
       </div>
- <div class="form-row" style="justify-content: center; margin-top: 20px;">
-  <button type="submit" class="submit-button">Enviar formulario</button>
-</div>
+      <div class="form-row" style="flex-direction: column; align-items: center; margin-top: 20px;">
+        <button type="submit" class="submit-button">Enviar formulario</button>
+        <p id="mensaje" style="margin-top: 10px;"></p> 
+      </div>
   </form>
   <footer>
 
