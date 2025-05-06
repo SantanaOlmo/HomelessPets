@@ -2,7 +2,7 @@
 :root{
     --color-lima:#bad326;
     --color-pastel:#d6e37b;
-    --color-oliva:#566813;
+    --color-oliva:#d6e37b;
     --color-pistacho:#90ac5c;
     --color-arena:#b8a97d;
 }
@@ -38,12 +38,47 @@ header {
     overflow:visible; /* Para que los submenús no sobresalgan */
 }
 
-header img {
+/*---LOGO----------------------------------------------------------------*/
+
+.flip-container {
     position: fixed;
     left: 2em;
-    width: 3%;
-}
+    width: 3em;
+    height: 3em;
+    perspective: 1000px;
+  }
 
+  .flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-container:hover .flipper {
+    transform: rotateY(180deg);
+    cursor: pointer;
+  }
+
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .front {
+    z-index: 2;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+  }
+
+
+
+  /*LINKS DEL HEADER */
 .links {
     position: relative;
     text-decoration: none;
@@ -248,6 +283,7 @@ main {
  
 
 }
+
 .fotoPerfil{
     z-index: 0;
     align-content: center;
@@ -292,14 +328,14 @@ main {
 .tarjetaEspecie{
 
     
-    border: 5px solid  #566813;;
+    border: 5px solid  var(--color-arena);
     position: relative;
     width: 12vw;
     height: 12vw;
     border-radius: 25px;
     display: inline-block;
     margin:2vw;
-    background-color:  #d6e37b;
+    background-color:  #ffffff;
     overflow: hidden;
    
     .flow{
@@ -311,18 +347,17 @@ main {
         width: 100%;
         position: absolute;
         bottom:0;
-        background-color: rgb(255, 255, 255);
+        background-color: var(--color-pastel);
         z-index: 1;
         transition: height .8s ease-in-out;
 
         h2{
             opacity: 0;
             transition:opacity .5s ease-in-out;
+            font-size: 1.2em;
+            color: white;
         }
-        .slogan{
-            opacity: 0;
-            transition:opacity .5s ease-in-out;
-        }
+      
     }
 }
 .tarjetaEspecie:hover{
