@@ -28,15 +28,19 @@ form {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
+
 
 label {
     display: block;
     margin-bottom: 5px;
 }
 
-input {
-    width: 100%;
+.input {
     padding: 8px;
     margin-bottom: 15px;
     border-radius: 5px;
