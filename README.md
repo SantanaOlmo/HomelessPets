@@ -15,13 +15,25 @@
 10. Permitir borrar cosas con usuario Admin.(Marco)
 
 
-# [HOMELESS PETS](https://homelesspets-70a83.web.app/)
-[Presentación 25/04/2025](https://www.canva.com/design/DAGlpVrkK2c/GHTvgDYKoq8GquC2-molMQ/edit)
+# Homeless Pets
+[nuestra web](https://homelesspets-70a83.web.app/)
 
-## [Backend (firebase)](https://console.firebase.google.com/u/0/project/homelesspets-70a83/overview?hl=es)
+[Presentación](https://www.canva.com/design/DAGlpVrkK2c/GHTvgDYKoq8GquC2-molMQ/edit)
+
+[Backend (firebase)](https://console.firebase.google.com/u/0/project/homelesspets-70a83/overview?hl=es)
+
+[Diseño en Figma](https://www.figma.com/design/Dg4AVvgQM7ZJ2q1Zo00ZOX/Untitled?node-id=0-1&t=huoikK0yjpmwXmYm-1)
+
+
+### Indice
+
+<a href="#listaanimales">Lista de animales</a>
+
+### Configuracion del repositorio con Firebase(firebase init hosting:github)
+
 
 ### Lista de animales
-<a href="/views/ejemploPerro.html">Enlace</a>
+<a id="listaanimales" href="/views/ejemploPerro.html">Enlace</a>
 
 Los usuarios pueden explorar cada categoría para conocer los detalles de las mascotas disponibles para adopción. Cada ficha de animal incluye su nombre, una foto, su descripción, edad, raza y tamaño. Los usuarios pueden interactuar con cada mascota mediante dos botones: uno para adoptarla y otro para marcarla como favorita.
 
