@@ -249,22 +249,10 @@ main {
 
 
 
-/*-------A S I D E   D E R E C H A----------------------------------------------------------------------------------------------------------*/
-#RecienLlegados{
-    top: 33vh;
-    width: 5vw;
-    right: 2vw;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #566813; 
-    border-radius: 200px;
-    border: .5vw solid #90ac5c;
-    aspect-ratio: 1/3 ;
-    z-index: 2;
-
-
+/*-------A S I D E   D E R E C H A--------------------------------------------------*/
+#RecienLlegados {
+    padding: 40px;
+}
 
 #cajaRecienLlegados {
     display: flex;
@@ -317,48 +305,19 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
-
-    .panel{
-        font-weight: 900;
-        font-size: 2vw;
-        color: white;
-        opacity: 0;
-        position: absolute;
-        width: 0%;
-        height: 100%;
-        top: 0;
-        left: 0px;
-        z-index: 2;
-        background-color: #d6e37b;
-        border-radius: 20px;
-        transition: width .5s ease-in-out;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
- 
-
-}
-
-.fotoPerfil{
-    z-index: 0;
-    align-content: center;
-    height: 100%;
-    transition: opacity .5s ease-in-out;
-
-    
-
-}
-.tarjetas:hover{
+    text-align: left;
     cursor: pointer;
     
 }
 
 
-/* E S P E C I E S -----------------------------------------------------------------------------------------------------*/
+.tarjetas:hover .panel {
+    opacity: 1;
+}
+
+
+
+/* E S P E C I E S */
 #Especies{
     text-align: center;
     padding:2vw 10vw;
@@ -564,4 +523,3 @@ footer hr{
     
 }
 
-}
