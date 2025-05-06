@@ -5,6 +5,7 @@
     --color-oliva:#d6e37b;
     --color-pistacho:#90ac5c;
     --color-arena:#b8a97d;
+    --color-oscuro:#566813;
 }
 
 
@@ -16,7 +17,7 @@
 }
 
 
-/*--H E A D E R-------------------------------*/
+/*--H E A D E R-------------------------------------------------------------------------------------------------------------------------*/
 header {
     position: fixed;
     top: 0;
@@ -37,7 +38,7 @@ header {
     overflow:visible; /* Para que los submenús no sobresalgan */
 }
 
-/*---LOGO----------------------------------------------------------------*/
+/*LOGO*/
 
 .flip-container {
     position: fixed;
@@ -45,35 +46,35 @@ header {
     width: 3em;
     height: 3em;
     perspective: 1000px;
-  }
+}
 
-  .flipper {
+.flipper {
     position: relative;
     width: 100%;
     height: 100%;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-  }
+}
 
-  .flip-container:hover .flipper {
+.flip-container:hover .flipper {
     transform: rotateY(180deg);
     cursor: pointer;
-  }
+}
 
-  .front, .back {
+.front, .back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-  }
+}
 
-  .front {
+.front {
     z-index: 2;
-  }
+}
 
-  .back {
+.back {
     transform: rotateY(180deg);
-  }
+}
 
 
 
@@ -126,25 +127,42 @@ header {
 }
 
 /*LOGIN*/
+
+.login-form{
+    position:fixed;
+    right: 6em;
+    top: 25px;
+}
   
   .login-form input {
     margin: 2px 0;
     padding: 4px 8px;
     font-size: 10px;
+    border-radius: 25px;
+    border-style: none;
+    width: 10em;
+  }
+  .login-form input:focus{
+    border-style: none;
+    outline: none;
   }
   
   .login-form button {
     margin-top: 4px;
     padding: 4px 10px;
-    background-color: #489961;
-    color: rgb(0, 0, 0);
+    background-color: var(--color-pistacho);
+    color: var(--color-oscuro);
     border: none;
     cursor: pointer;
     font-size: 10px;
+    border-radius: 25px;
+    font-size: .7em;
   }
   
   .login-form button:hover {
-    background-color: #33d682;
+    background-color:var(--color-lima);
+    color: rgb(14, 82, 14);
+    
   }
   
   .login-links {
@@ -161,7 +179,7 @@ header {
   .login-links a:hover {
     text-decoration: underline;
   }
-/*----M A I N----------------------*/
+/*----M A I N--------------------------------------------------------------------------------------------------------------*/
 main {
     margin: 0;
     height: 100%;
@@ -221,7 +239,7 @@ main {
 
 
 
-/*-------A S I D E   D E R E C H A--------------------------------------------------*/
+/*-------A S I D E   D E R E C H A----------------------------------------------------------------------------------------------------------*/
 #RecienLlegados{
     top: 33vh;
     width: 5vw;
@@ -307,7 +325,7 @@ main {
 }
 
 
-/* E S P E C I E S */
+/* E S P E C I E S -----------------------------------------------------------------------------------------------------*/
 #Especies{
     text-align: center;
     padding:2vw 10vw;
@@ -378,7 +396,7 @@ main {
 }
 
 
-/* --P O N E R   E N   A D O P C I O N-------------------------------------------------*/
+/* --P O N E R   E N   A D O P C I O N---------------------------------------------------------------------------------------------------------------*/
 
 #darEnAdopcion{
     position: relative;
@@ -423,7 +441,7 @@ main {
 }
 
 
-/*-F O O T E R-----------------------------------------------*/
+/*-F O O T E R---------------------------------------------------------------------------------------------------------------------------------------*/
 footer{
     background-color: #566813;
 }
